@@ -18,9 +18,9 @@
 {
     
     // Initialize the Kii SDK!
-    [Kii beginWithID:@"sandboxios"
-              andKey:@"dummy"
-       withCustomURL:@"http://dev-ufe-jp.internal.kii.com:12090"];
+    [Kii beginWithID:@"__KII_APP_ID__"
+              andKey:@"__KII_APP_key__"
+       withCustomURL:@"__KII_API_URL__"];
                 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
