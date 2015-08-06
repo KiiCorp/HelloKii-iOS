@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DBE9A971B71EC1F00C67A06 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE9A961B71EC1F00C67A06 /* MainViewController.m */; };
+		4DEF11231B69F5B2001895DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF11221B69F5B2001895DB /* main.m */; };
+		4DEF11261B69F5B2001895DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF11251B69F5B2001895DB /* AppDelegate.m */; };
+		4DEF112C1B69F5B2001895DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF112A1B69F5B2001895DB /* Main.storyboard */; };
+		4DEF112E1B69F5B2001895DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF112D1B69F5B2001895DB /* Images.xcassets */; };
+		4DEF113D1B69F5B2001895DB /* HelloKii_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF113C1B69F5B2001895DB /* HelloKii_iOSTests.m */; };
+		4DEF11481B69F6FB001895DB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF11471B69F6FB001895DB /* LoginViewController.m */; };
+		4DEF11541B6A32E0001895DB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF114E1B6A32E0001895DB /* Accounts.framework */; };
+		4DEF11551B6A32E0001895DB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF114F1B6A32E0001895DB /* ImageIO.framework */; };
+		4DEF11561B6A32E0001895DB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11501B6A32E0001895DB /* libsqlite3.dylib */; };
+		4DEF11571B6A32E0001895DB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11511B6A32E0001895DB /* MobileCoreServices.framework */; };
+		4DEF11581B6A32E0001895DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11521B6A32E0001895DB /* Security.framework */; };
+		4DEF11591B6A32E0001895DB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11531B6A32E0001895DB /* Social.framework */; };
+		4DEF115C1B6B0528001895DB /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF115B1B6B0528001895DB /* KiiSDK.framework */; };
+		4DEF115F1B6B23CF001895DB /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF115E1B6B23CF001895DB /* UIViewController+Alert.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DEF11371B69F5B2001895DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DEF11151B69F5B1001895DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DEF111C1B69F5B1001895DB;
+			remoteInfo = "HelloKii-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4DBE9A951B71EC1F00C67A06 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4DBE9A961B71EC1F00C67A06 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4DEF111D1B69F5B2001895DB /* HelloKii-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloKii-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DEF11211B69F5B2001895DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DEF11221B69F5B2001895DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4DEF11241B69F5B2001895DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4DEF11251B69F5B2001895DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4DEF112B1B69F5B2001895DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DEF112D1B69F5B2001895DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DEF11361B69F5B2001895DB /* HelloKii-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HelloKii-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DEF113B1B69F5B2001895DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DEF113C1B69F5B2001895DB /* HelloKii_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloKii_iOSTests.m; sourceTree = "<group>"; };
+		4DEF11461B69F6FB001895DB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4DEF11471B69F6FB001895DB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4DEF114E1B6A32E0001895DB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		4DEF114F1B6A32E0001895DB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		4DEF11501B6A32E0001895DB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4DEF11511B6A32E0001895DB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4DEF11521B6A32E0001895DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4DEF11531B6A32E0001895DB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4DEF115B1B6B0528001895DB /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
+		4DEF115D1B6B2324001895DB /* UIViewController+Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
+		4DEF115E1B6B23CF001895DB /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DEF111A1B69F5B1001895DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DEF115C1B6B0528001895DB /* KiiSDK.framework in Frameworks */,
+				4DEF11541B6A32E0001895DB /* Accounts.framework in Frameworks */,
+				4DEF11551B6A32E0001895DB /* ImageIO.framework in Frameworks */,
+				4DEF11561B6A32E0001895DB /* libsqlite3.dylib in Frameworks */,
+				4DEF11571B6A32E0001895DB /* MobileCoreServices.framework in Frameworks */,
+				4DEF11581B6A32E0001895DB /* Security.framework in Frameworks */,
+				4DEF11591B6A32E0001895DB /* Social.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF11331B69F5B2001895DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DEF11141B69F5B1001895DB = {
+			isa = PBXGroup;
+			children = (
+				4DEF115B1B6B0528001895DB /* KiiSDK.framework */,
+				4DEF114E1B6A32E0001895DB /* Accounts.framework */,
+				4DEF114F1B6A32E0001895DB /* ImageIO.framework */,
+				4DEF11501B6A32E0001895DB /* libsqlite3.dylib */,
+				4DEF11511B6A32E0001895DB /* MobileCoreServices.framework */,
+				4DEF11521B6A32E0001895DB /* Security.framework */,
+				4DEF11531B6A32E0001895DB /* Social.framework */,
+				4DEF111F1B69F5B2001895DB /* HelloKii-iOS */,
+				4DEF11391B69F5B2001895DB /* HelloKii-iOSTests */,
+				4DEF111E1B69F5B2001895DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DEF111E1B69F5B2001895DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DEF111D1B69F5B2001895DB /* HelloKii-iOS.app */,
+				4DEF11361B69F5B2001895DB /* HelloKii-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DEF111F1B69F5B2001895DB /* HelloKii-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4DEF11241B69F5B2001895DB /* AppDelegate.h */,
+				4DEF11251B69F5B2001895DB /* AppDelegate.m */,
+				4DEF112A1B69F5B2001895DB /* Main.storyboard */,
+				4DEF112D1B69F5B2001895DB /* Images.xcassets */,
+				4DEF11201B69F5B2001895DB /* Supporting Files */,
+				4DEF11461B69F6FB001895DB /* LoginViewController.h */,
+				4DEF11471B69F6FB001895DB /* LoginViewController.m */,
+				4DEF115D1B6B2324001895DB /* UIViewController+Alert.h */,
+				4DEF115E1B6B23CF001895DB /* UIViewController+Alert.m */,
+				4DBE9A951B71EC1F00C67A06 /* MainViewController.h */,
+				4DBE9A961B71EC1F00C67A06 /* MainViewController.m */,
+			);
+			path = "HelloKii-iOS";
+			sourceTree = "<group>";
+		};
+		4DEF11201B69F5B2001895DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DEF11211B69F5B2001895DB /* Info.plist */,
+				4DEF11221B69F5B2001895DB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DEF11391B69F5B2001895DB /* HelloKii-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DEF113C1B69F5B2001895DB /* HelloKii_iOSTests.m */,
+				4DEF113A1B69F5B2001895DB /* Supporting Files */,
+			);
+			path = "HelloKii-iOSTests";
+			sourceTree = "<group>";
+		};
+		4DEF113A1B69F5B2001895DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DEF113B1B69F5B2001895DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DEF111C1B69F5B1001895DB /* HelloKii-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DEF11401B69F5B2001895DB /* Build configuration list for PBXNativeTarget "HelloKii-iOS" */;
+			buildPhases = (
+				4DEF11191B69F5B1001895DB /* Sources */,
+				4DEF111A1B69F5B1001895DB /* Frameworks */,
+				4DEF111B1B69F5B1001895DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HelloKii-iOS";
+			productName = "HelloKii-iOS";
+			productReference = 4DEF111D1B69F5B2001895DB /* HelloKii-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DEF11351B69F5B2001895DB /* HelloKii-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DEF11431B69F5B2001895DB /* Build configuration list for PBXNativeTarget "HelloKii-iOSTests" */;
+			buildPhases = (
+				4DEF11321B69F5B2001895DB /* Sources */,
+				4DEF11331B69F5B2001895DB /* Frameworks */,
+				4DEF11341B69F5B2001895DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DEF11381B69F5B2001895DB /* PBXTargetDependency */,
+			);
+			name = "HelloKii-iOSTests";
+			productName = "HelloKii-iOSTests";
+			productReference = 4DEF11361B69F5B2001895DB /* HelloKii-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DEF11151B69F5B1001895DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Kii Corporation";
+				TargetAttributes = {
+					4DEF111C1B69F5B1001895DB = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					4DEF11351B69F5B2001895DB = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 4DEF111C1B69F5B1001895DB;
+					};
+				};
+			};
+			buildConfigurationList = 4DEF11181B69F5B1001895DB /* Build configuration list for PBXProject "HelloKii-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DEF11141B69F5B1001895DB;
+			productRefGroup = 4DEF111E1B69F5B2001895DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DEF111C1B69F5B1001895DB /* HelloKii-iOS */,
+				4DEF11351B69F5B2001895DB /* HelloKii-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DEF111B1B69F5B1001895DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DEF112C1B69F5B2001895DB /* Main.storyboard in Resources */,
+				4DEF112E1B69F5B2001895DB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF11341B69F5B2001895DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DEF11191B69F5B1001895DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DEF11261B69F5B2001895DB /* AppDelegate.m in Sources */,
+				4DBE9A971B71EC1F00C67A06 /* MainViewController.m in Sources */,
+				4DEF11231B69F5B2001895DB /* main.m in Sources */,
+				4DEF11481B69F6FB001895DB /* LoginViewController.m in Sources */,
+				4DEF115F1B6B23CF001895DB /* UIViewController+Alert.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF11321B69F5B2001895DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DEF113D1B69F5B2001895DB /* HelloKii_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DEF11381B69F5B2001895DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DEF111C1B69F5B1001895DB /* HelloKii-iOS */;
+			targetProxy = 4DEF11371B69F5B2001895DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4DEF112A1B69F5B2001895DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DEF112B1B69F5B2001895DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DEF113E1B69F5B2001895DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4DEF113F1B69F5B2001895DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DEF11411B69F5B2001895DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "HelloKii-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4DEF11421B69F5B2001895DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "HelloKii-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4DEF11441B69F5B2001895DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HelloKii-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS";
+			};
+			name = Debug;
+		};
+		4DEF11451B69F5B2001895DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HelloKii-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DEF11181B69F5B1001895DB /* Build configuration list for PBXProject "HelloKii-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEF113E1B69F5B2001895DB /* Debug */,
+				4DEF113F1B69F5B2001895DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DEF11401B69F5B2001895DB /* Build configuration list for PBXNativeTarget "HelloKii-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEF11411B69F5B2001895DB /* Debug */,
+				4DEF11421B69F5B2001895DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DEF11431B69F5B2001895DB /* Build configuration list for PBXNativeTarget "HelloKii-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEF11441B69F5B2001895DB /* Debug */,
+				4DEF11451B69F5B2001895DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DEF11151B69F5B1001895DB /* Project object */;
+}
