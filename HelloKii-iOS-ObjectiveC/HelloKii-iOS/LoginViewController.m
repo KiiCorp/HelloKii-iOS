@@ -22,8 +22,8 @@
 #import "UIViewController+Alert.h"
 
 @interface LoginViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *userName;
-@property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 - (IBAction)loginButtonPressed:(id)sender;
 - (IBAction)signupButtonPressed:(id)sender;
@@ -45,13 +45,40 @@
     [self.view endEditing:YES];
 }
 
+- (IBAction)signupButtonPressed:(id)sender {
+    // show the activity indicator
+    [self.activityIndicator startAnimating];
+    
+    // get the username/password combination from the UI
+    NSString *username = self.usernameField.text;
+    NSString *password = self.passwordField.text;
+    
+    // create a KiiUser object
+    KiiUser *user = [KiiUser userWithUsername:username
+                                  andPassword:password];
+    // register the user asynchronously
+    [user performRegistrationWithBlock:^(KiiUser *user, NSError *error) {
+        // hide the activity indicator(configured "Hides When Stopped" in storyboard)
+        [self.activityIndicator stopAnimating];
+        
+        // check for an error(successful request if error==nil)
+        if (error != nil) {
+            [self showMessage:@"Sign up failed" error:error];
+            return;
+        }
+        
+        // go to the main screen
+        [self performSegueWithIdentifier:@"OpenMainPage" sender:nil];
+    }];
+}
+
 - (IBAction)loginButtonPressed:(id)sender {
     // show the activity indicator
     [self.activityIndicator startAnimating];
 
     // get the username/password combination from the UI
-    NSString *username = self.userName.text;
-    NSString *password = self.password.text;
+    NSString *username = self.usernameField.text;
+    NSString *password = self.passwordField.text;
 
     // authenticate the user asynchronously
     [KiiUser authenticate:username
@@ -62,33 +89,7 @@
 
         // check for an error(successful request if error==nil)
         if (error != nil) {
-            [self showMessage:@"Login failed: %@", error.userInfo[@"description"]];
-            return;
-        }
-
-        // go to the main screen
-        [self performSegueWithIdentifier:@"OpenMainPage" sender:nil];
-    }];
-}
-
-- (IBAction)signupButtonPressed:(id)sender {
-    // show the activity indicator
-    [self.activityIndicator startAnimating];
-
-    // get the username/password combination from the UI
-    NSString *username = self.userName.text;
-    NSString *password = self.password.text;
-
-    // register the user asynchronously
-    KiiUser *user = [KiiUser userWithUsername:username
-                                  andPassword:password];
-    [user performRegistrationWithBlock:^(KiiUser *user, NSError *error) {
-        // hide the activity indicator(configured "Hides When Stopped" in storyboard)
-        [self.activityIndicator stopAnimating];
-
-        // check for an error(successful request if error==nil)
-        if (error != nil) {
-            [self showMessage:@"Sign up failed: %@", error.userInfo[@"description"]];
+            [self showMessage:@"Login failed" error:error];
             return;
         }
 

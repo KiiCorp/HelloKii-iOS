@@ -30,7 +30,7 @@
 
 // define the object count
 // used to easily see object names incrementing
-@property int createdObjectCount;
+@property int objectCount;
 @end
 
 @implementation MainViewController
@@ -46,10 +46,16 @@ NSString * const OBJECT_KEY = @"myObjectValue";
 
     // initialize the data
     self.objectList = [NSMutableArray array];
-    self.createdObjectCount = 0;
+    self.objectCount = 0;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 - (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
     // add "+" button to the navigation bar
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                target:self
@@ -63,6 +69,9 @@ NSString * const OBJECT_KEY = @"myObjectValue";
 - (void)viewDidAppear:(BOOL)animated {
     // show the activity indicator
     [self.activityIndicator startAnimating];
+    
+    // clear all items
+    [self.objectList removeAllObjects];
 
     // create an empty KiiQuery (will retrieve all results, sorted by creation date)
     KiiQuery *allQuery = [KiiQuery queryWithClause:nil];
@@ -72,24 +81,20 @@ NSString * const OBJECT_KEY = @"myObjectValue";
     KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:BUCKET_NAME];
 
     // perform the query
-    [bucket executeQuery:allQuery withBlock:^(KiiQuery *query, KiiBucket *bucket, NSArray *results, KiiQuery *nextQuery, NSError *error) {
+    [bucket executeQuery:allQuery withBlock:^(KiiQuery *query, KiiBucket *bucket, NSArray *result, KiiQuery *nextQuery, NSError *error) {
         // hide the activity indicator(configured "Hides When Stopped" in storyboard)
         [self.activityIndicator stopAnimating];
 
         // check for an error(successful request if error==nil)
         if (error != nil) {
-            [self showMessage:@"Query failed: %@", error.userInfo[@"description"]];
+            [self showMessage:@"Query failed" error:error];
             return;
         }
 
         // add the objects to the objectList and display them
-        [self.objectList addObjectsFromArray:results];
+        [self.objectList addObjectsFromArray:result];
         [self.tableView reloadData];
     }];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Table view data source
@@ -112,7 +117,7 @@ NSString * const OBJECT_KEY = @"myObjectValue";
     }
 
     // fill the field from object array
-    KiiObject* obj = _objectList[indexPath.row];
+    KiiObject *obj = _objectList[indexPath.row];
     cell.textLabel.text = [obj getObjectForKey:OBJECT_KEY];
     cell.detailTextLabel.text = obj.objectURI;
     return cell;
@@ -144,23 +149,24 @@ NSString * const OBJECT_KEY = @"myObjectValue";
     // show the activity indicator
     [self.activityIndicator startAnimating];
 
-    // create a new KiiObject in the bucket
-    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:BUCKET_NAME];
-    KiiObject *object = [bucket createObject];
+    // create an incremented title for the object
+    NSString *value = [NSString stringWithFormat:@"MyObject %d", ++_objectCount];
 
-    // set a key/value
-    // the value of OBJECT_KEY field is an incremented title
-    NSString *value = [NSString stringWithFormat:@"MyObject %d", ++_createdObjectCount];
+    // get a reference to a KiiBucket
+    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:BUCKET_NAME];
+    
+    // create a new KiiObject and set a key/value
+    KiiObject *object = [bucket createObject];
     [object setObject:value forKey:OBJECT_KEY];
 
     // save the object asynchronoously
-    [object save:YES withBlock:^(KiiObject *object, NSError *error) {
+    [object saveWithBlock:^(KiiObject *object, NSError *error) {
         // hide the activity indicator(configured "Hides When Stopped" in storyboard)
         [self.activityIndicator stopAnimating];
 
         // check for an error(successful request if error==nil)
         if (error != nil) {
-            [self showMessage:@"Save failed: %@", error.userInfo[@"description"]];
+            [self showMessage:@"Save failed" error:error];
             return;
         }
 
@@ -170,12 +176,12 @@ NSString * const OBJECT_KEY = @"myObjectValue";
     }];
 }
 
-- (void)performDelete:(long) row {
+- (void)performDelete:(long) position {
     // show the activity indicator
     [self.activityIndicator startAnimating];
 
     // get the object to delete based on the index of the row that was tapped
-    KiiObject *obj = _objectList[row];
+    KiiObject *obj = _objectList[position];
 
     // delete the object synchronously
     [obj deleteWithBlock:^(KiiObject *object, NSError *error) {
@@ -184,12 +190,11 @@ NSString * const OBJECT_KEY = @"myObjectValue";
 
         // check for an error(successful request if error==nil)
         if (error != nil) {
-            [self showMessage:@"Delete failed: %@", error.userInfo[@"description"]];
+            [self showMessage:@"Delete failed" error:error];
             return;
         }
 
-        // insert the object into the beginning of the objectList and display them
-        // if the user click the same row twice while sending the request, no data would remove from objectList
+        // remove the object from the list
         [self.objectList removeObject:obj];
         [self.tableView reloadData];
     }];

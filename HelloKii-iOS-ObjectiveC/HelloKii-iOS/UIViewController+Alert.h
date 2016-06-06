@@ -23,7 +23,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIViewController (Alert)
-- (void)showMessage:(NSString*)format, ...;
+- (void)showMessage:(NSString*)message error:(NSError*)error;
 @end
 
 #endif

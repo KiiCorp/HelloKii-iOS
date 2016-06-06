@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D532DBB1D053B9000DC4956 /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D532DBA1D053B9000DC4956 /* KiiSDK.framework */; };
 		4DBE9A971B71EC1F00C67A06 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE9A961B71EC1F00C67A06 /* MainViewController.m */; };
+		4DD8ECC91CB39C6E00B3164B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8ECC81CB39C6E00B3164B /* libsqlite3.tbd */; };
 		4DEF11231B69F5B2001895DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF11221B69F5B2001895DB /* main.m */; };
 		4DEF11261B69F5B2001895DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF11251B69F5B2001895DB /* AppDelegate.m */; };
 		4DEF112C1B69F5B2001895DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF112A1B69F5B2001895DB /* Main.storyboard */; };
@@ -16,11 +18,9 @@
 		4DEF11481B69F6FB001895DB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF11471B69F6FB001895DB /* LoginViewController.m */; };
 		4DEF11541B6A32E0001895DB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF114E1B6A32E0001895DB /* Accounts.framework */; };
 		4DEF11551B6A32E0001895DB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF114F1B6A32E0001895DB /* ImageIO.framework */; };
-		4DEF11561B6A32E0001895DB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11501B6A32E0001895DB /* libsqlite3.dylib */; };
 		4DEF11571B6A32E0001895DB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11511B6A32E0001895DB /* MobileCoreServices.framework */; };
 		4DEF11581B6A32E0001895DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11521B6A32E0001895DB /* Security.framework */; };
 		4DEF11591B6A32E0001895DB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11531B6A32E0001895DB /* Social.framework */; };
-		4DEF115C1B6B0528001895DB /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF115B1B6B0528001895DB /* KiiSDK.framework */; };
 		4DEF115F1B6B23CF001895DB /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF115E1B6B23CF001895DB /* UIViewController+Alert.m */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D532DBA1D053B9000DC4956 /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
 		4DBE9A951B71EC1F00C67A06 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4DBE9A961B71EC1F00C67A06 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4DD8ECC81CB39C6E00B3164B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		4DEF111D1B69F5B2001895DB /* HelloKii-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloKii-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DEF11211B69F5B2001895DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DEF11221B69F5B2001895DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,11 +53,9 @@
 		4DEF11471B69F6FB001895DB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4DEF114E1B6A32E0001895DB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		4DEF114F1B6A32E0001895DB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		4DEF11501B6A32E0001895DB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4DEF11511B6A32E0001895DB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4DEF11521B6A32E0001895DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4DEF11531B6A32E0001895DB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		4DEF115B1B6B0528001895DB /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
 		4DEF115D1B6B2324001895DB /* UIViewController+Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
 		4DEF115E1B6B23CF001895DB /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,10 +65,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DEF115C1B6B0528001895DB /* KiiSDK.framework in Frameworks */,
+				4D532DBB1D053B9000DC4956 /* KiiSDK.framework in Frameworks */,
+				4DD8ECC91CB39C6E00B3164B /* libsqlite3.tbd in Frameworks */,
 				4DEF11541B6A32E0001895DB /* Accounts.framework in Frameworks */,
 				4DEF11551B6A32E0001895DB /* ImageIO.framework in Frameworks */,
-				4DEF11561B6A32E0001895DB /* libsqlite3.dylib in Frameworks */,
 				4DEF11571B6A32E0001895DB /* MobileCoreServices.framework in Frameworks */,
 				4DEF11581B6A32E0001895DB /* Security.framework in Frameworks */,
 				4DEF11591B6A32E0001895DB /* Social.framework in Frameworks */,
@@ -88,10 +88,10 @@
 		4DEF11141B69F5B1001895DB = {
 			isa = PBXGroup;
 			children = (
-				4DEF115B1B6B0528001895DB /* KiiSDK.framework */,
+				4D532DBA1D053B9000DC4956 /* KiiSDK.framework */,
+				4DD8ECC81CB39C6E00B3164B /* libsqlite3.tbd */,
 				4DEF114E1B6A32E0001895DB /* Accounts.framework */,
 				4DEF114F1B6A32E0001895DB /* ImageIO.framework */,
-				4DEF11501B6A32E0001895DB /* libsqlite3.dylib */,
 				4DEF11511B6A32E0001895DB /* MobileCoreServices.framework */,
 				4DEF11521B6A32E0001895DB /* Security.framework */,
 				4DEF11531B6A32E0001895DB /* Social.framework */,
@@ -198,11 +198,12 @@
 		4DEF11151B69F5B1001895DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Kii Corporation";
 				TargetAttributes = {
 					4DEF111C1B69F5B1001895DB = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = N5QLD3RVE2;
 					};
 					4DEF11351B69F5B2001895DB = {
 						CreatedOnToolsVersion = 6.4;
@@ -312,6 +313,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -327,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -364,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -375,13 +377,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "HelloKii-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -389,13 +396,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "HelloKii-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -403,16 +415,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "HelloKii-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS";
 			};
@@ -422,14 +433,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "HelloKii-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS";
+				"TEST_HOST[sdk=*]" = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS";
 			};
 			name = Release;
 		};

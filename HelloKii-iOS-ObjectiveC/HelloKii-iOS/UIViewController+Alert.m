@@ -21,17 +21,18 @@
 
 @implementation UIViewController (Alert)
 
-- (void)showMessage:(NSString*)format, ... {
+- (void)showMessage:(NSString*)message error:(NSError*)error {
     // format the message
-    va_list arguments;
-    va_start(arguments, format);
-    NSString *message = [[NSString alloc] initWithFormat:format
-                                               arguments:arguments];
-    va_end(arguments);
+    NSString *alertMessage;
+    if (error != nil && error.userInfo[@"description"] != nil) {
+        alertMessage = [[message stringByAppendingString:@": "] stringByAppendingString:error.userInfo[@"description"]];
+    } else {
+        alertMessage = message;
+    }
     
     // show an alert dialog
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
-                                                                   message:message
+                                                                   message:alertMessage
                                                             preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"OK"
                                               style:UIAlertActionStyleDefault
