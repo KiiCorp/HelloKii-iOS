@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DD8ECD71CB5F65C00B3164B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8ECD61CB5F65C00B3164B /* AppDelegate.swift */; };
+		4DD8ECD91CB5F65C00B3164B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8ECD81CB5F65C00B3164B /* LoginViewController.swift */; };
+		4DD8ECDC1CB5F65C00B3164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD8ECDA1CB5F65C00B3164B /* Main.storyboard */; };
+		4DD8ECDE1CB5F65C00B3164B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DD8ECDD1CB5F65C00B3164B /* Assets.xcassets */; };
+		4DD8ECEC1CB5F65D00B3164B /* HelloKii_iOS_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8ECEB1CB5F65D00B3164B /* HelloKii_iOS_SwiftTests.swift */; };
+		4DD8ECF71CB5F65D00B3164B /* HelloKii_iOS_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8ECF61CB5F65D00B3164B /* HelloKii_iOS_SwiftUITests.swift */; };
+		4DD8ED051CB6295900B3164B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8ED041CB6295900B3164B /* MainViewController.swift */; };
+		4DD8ED071CB633DD00B3164B /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8ED061CB633DD00B3164B /* UIViewController+Alert.swift */; };
+		4DD8ED441CBCA03500B3164B /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8ED431CBCA03500B3164B /* KiiSDK.framework */; };
+		4DD8ED4B1CBCA06100B3164B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8ED451CBCA06100B3164B /* Accounts.framework */; };
+		4DD8ED4C1CBCA06100B3164B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8ED461CBCA06100B3164B /* ImageIO.framework */; };
+		4DD8ED4D1CBCA06100B3164B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8ED471CBCA06100B3164B /* libsqlite3.tbd */; };
+		4DD8ED4E1CBCA06100B3164B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8ED481CBCA06100B3164B /* MobileCoreServices.framework */; };
+		4DD8ED4F1CBCA06100B3164B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8ED491CBCA06100B3164B /* Security.framework */; };
+		4DD8ED501CBCA06100B3164B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8ED4A1CBCA06100B3164B /* Social.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DD8ECE81CB5F65D00B3164B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DD8ECCB1CB5F65C00B3164B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DD8ECD21CB5F65C00B3164B;
+			remoteInfo = "HelloKii-iOS-Swift";
+		};
+		4DD8ECF31CB5F65D00B3164B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DD8ECCB1CB5F65C00B3164B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DD8ECD21CB5F65C00B3164B;
+			remoteInfo = "HelloKii-iOS-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4DD8ECD31CB5F65C00B3164B /* HelloKii-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloKii-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DD8ECD61CB5F65C00B3164B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4DD8ECD81CB5F65C00B3164B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4DD8ECDB1CB5F65C00B3164B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DD8ECDD1CB5F65C00B3164B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DD8ECE21CB5F65C00B3164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DD8ECE71CB5F65D00B3164B /* HelloKii-iOS-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HelloKii-iOS-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DD8ECEB1CB5F65D00B3164B /* HelloKii_iOS_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloKii_iOS_SwiftTests.swift; sourceTree = "<group>"; };
+		4DD8ECED1CB5F65D00B3164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DD8ECF21CB5F65D00B3164B /* HelloKii-iOS-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HelloKii-iOS-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DD8ECF61CB5F65D00B3164B /* HelloKii_iOS_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloKii_iOS_SwiftUITests.swift; sourceTree = "<group>"; };
+		4DD8ECF81CB5F65D00B3164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DD8ED041CB6295900B3164B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4DD8ED061CB633DD00B3164B /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		4DD8ED431CBCA03500B3164B /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
+		4DD8ED451CBCA06100B3164B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		4DD8ED461CBCA06100B3164B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		4DD8ED471CBCA06100B3164B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		4DD8ED481CBCA06100B3164B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4DD8ED491CBCA06100B3164B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4DD8ED4A1CBCA06100B3164B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4DD8ED511CBCA07B00B3164B /* HelloKii-iOS-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloKii-iOS-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DD8ECD01CB5F65C00B3164B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DD8ED4B1CBCA06100B3164B /* Accounts.framework in Frameworks */,
+				4DD8ED4C1CBCA06100B3164B /* ImageIO.framework in Frameworks */,
+				4DD8ED4D1CBCA06100B3164B /* libsqlite3.tbd in Frameworks */,
+				4DD8ED4E1CBCA06100B3164B /* MobileCoreServices.framework in Frameworks */,
+				4DD8ED4F1CBCA06100B3164B /* Security.framework in Frameworks */,
+				4DD8ED501CBCA06100B3164B /* Social.framework in Frameworks */,
+				4DD8ED441CBCA03500B3164B /* KiiSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DD8ECE41CB5F65D00B3164B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DD8ECEF1CB5F65D00B3164B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DD8ECCA1CB5F65C00B3164B = {
+			isa = PBXGroup;
+			children = (
+				4DD8ED451CBCA06100B3164B /* Accounts.framework */,
+				4DD8ED461CBCA06100B3164B /* ImageIO.framework */,
+				4DD8ED471CBCA06100B3164B /* libsqlite3.tbd */,
+				4DD8ED481CBCA06100B3164B /* MobileCoreServices.framework */,
+				4DD8ED491CBCA06100B3164B /* Security.framework */,
+				4DD8ED4A1CBCA06100B3164B /* Social.framework */,
+				4DD8ED431CBCA03500B3164B /* KiiSDK.framework */,
+				4DD8ECD51CB5F65C00B3164B /* HelloKii-iOS-Swift */,
+				4DD8ECEA1CB5F65D00B3164B /* HelloKii-iOS-SwiftTests */,
+				4DD8ECF51CB5F65D00B3164B /* HelloKii-iOS-SwiftUITests */,
+				4DD8ECD41CB5F65C00B3164B /* Products */,
+				4DD8ED511CBCA07B00B3164B /* HelloKii-iOS-Swift-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		4DD8ECD41CB5F65C00B3164B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DD8ECD31CB5F65C00B3164B /* HelloKii-iOS-Swift.app */,
+				4DD8ECE71CB5F65D00B3164B /* HelloKii-iOS-SwiftTests.xctest */,
+				4DD8ECF21CB5F65D00B3164B /* HelloKii-iOS-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DD8ECD51CB5F65C00B3164B /* HelloKii-iOS-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4DD8ECD61CB5F65C00B3164B /* AppDelegate.swift */,
+				4DD8ECD81CB5F65C00B3164B /* LoginViewController.swift */,
+				4DD8ECDA1CB5F65C00B3164B /* Main.storyboard */,
+				4DD8ECDD1CB5F65C00B3164B /* Assets.xcassets */,
+				4DD8ECE21CB5F65C00B3164B /* Info.plist */,
+				4DD8ED041CB6295900B3164B /* MainViewController.swift */,
+				4DD8ED061CB633DD00B3164B /* UIViewController+Alert.swift */,
+			);
+			path = "HelloKii-iOS-Swift";
+			sourceTree = "<group>";
+		};
+		4DD8ECEA1CB5F65D00B3164B /* HelloKii-iOS-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DD8ECEB1CB5F65D00B3164B /* HelloKii_iOS_SwiftTests.swift */,
+				4DD8ECED1CB5F65D00B3164B /* Info.plist */,
+			);
+			path = "HelloKii-iOS-SwiftTests";
+			sourceTree = "<group>";
+		};
+		4DD8ECF51CB5F65D00B3164B /* HelloKii-iOS-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4DD8ECF61CB5F65D00B3164B /* HelloKii_iOS_SwiftUITests.swift */,
+				4DD8ECF81CB5F65D00B3164B /* Info.plist */,
+			);
+			path = "HelloKii-iOS-SwiftUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DD8ECD21CB5F65C00B3164B /* HelloKii-iOS-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DD8ECFB1CB5F65D00B3164B /* Build configuration list for PBXNativeTarget "HelloKii-iOS-Swift" */;
+			buildPhases = (
+				4DD8ECCF1CB5F65C00B3164B /* Sources */,
+				4DD8ECD01CB5F65C00B3164B /* Frameworks */,
+				4DD8ECD11CB5F65C00B3164B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HelloKii-iOS-Swift";
+			productName = "HelloKii-iOS-Swift";
+			productReference = 4DD8ECD31CB5F65C00B3164B /* HelloKii-iOS-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DD8ECE61CB5F65D00B3164B /* HelloKii-iOS-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DD8ECFE1CB5F65D00B3164B /* Build configuration list for PBXNativeTarget "HelloKii-iOS-SwiftTests" */;
+			buildPhases = (
+				4DD8ECE31CB5F65D00B3164B /* Sources */,
+				4DD8ECE41CB5F65D00B3164B /* Frameworks */,
+				4DD8ECE51CB5F65D00B3164B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DD8ECE91CB5F65D00B3164B /* PBXTargetDependency */,
+			);
+			name = "HelloKii-iOS-SwiftTests";
+			productName = "HelloKii-iOS-SwiftTests";
+			productReference = 4DD8ECE71CB5F65D00B3164B /* HelloKii-iOS-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4DD8ECF11CB5F65D00B3164B /* HelloKii-iOS-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DD8ED011CB5F65D00B3164B /* Build configuration list for PBXNativeTarget "HelloKii-iOS-SwiftUITests" */;
+			buildPhases = (
+				4DD8ECEE1CB5F65D00B3164B /* Sources */,
+				4DD8ECEF1CB5F65D00B3164B /* Frameworks */,
+				4DD8ECF01CB5F65D00B3164B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DD8ECF41CB5F65D00B3164B /* PBXTargetDependency */,
+			);
+			name = "HelloKii-iOS-SwiftUITests";
+			productName = "HelloKii-iOS-SwiftUITests";
+			productReference = 4DD8ECF21CB5F65D00B3164B /* HelloKii-iOS-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DD8ECCB1CB5F65C00B3164B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Kii Corporation";
+				TargetAttributes = {
+					4DD8ECD21CB5F65C00B3164B = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = N5QLD3RVE2;
+					};
+					4DD8ECE61CB5F65D00B3164B = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 4DD8ECD21CB5F65C00B3164B;
+					};
+					4DD8ECF11CB5F65D00B3164B = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 4DD8ECD21CB5F65C00B3164B;
+					};
+				};
+			};
+			buildConfigurationList = 4DD8ECCE1CB5F65C00B3164B /* Build configuration list for PBXProject "HelloKii-iOS-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DD8ECCA1CB5F65C00B3164B;
+			productRefGroup = 4DD8ECD41CB5F65C00B3164B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DD8ECD21CB5F65C00B3164B /* HelloKii-iOS-Swift */,
+				4DD8ECE61CB5F65D00B3164B /* HelloKii-iOS-SwiftTests */,
+				4DD8ECF11CB5F65D00B3164B /* HelloKii-iOS-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DD8ECD11CB5F65C00B3164B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DD8ECDE1CB5F65C00B3164B /* Assets.xcassets in Resources */,
+				4DD8ECDC1CB5F65C00B3164B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DD8ECE51CB5F65D00B3164B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DD8ECF01CB5F65D00B3164B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DD8ECCF1CB5F65C00B3164B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DD8ED051CB6295900B3164B /* MainViewController.swift in Sources */,
+				4DD8ECD91CB5F65C00B3164B /* LoginViewController.swift in Sources */,
+				4DD8ECD71CB5F65C00B3164B /* AppDelegate.swift in Sources */,
+				4DD8ED071CB633DD00B3164B /* UIViewController+Alert.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DD8ECE31CB5F65D00B3164B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DD8ECEC1CB5F65D00B3164B /* HelloKii_iOS_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DD8ECEE1CB5F65D00B3164B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DD8ECF71CB5F65D00B3164B /* HelloKii_iOS_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DD8ECE91CB5F65D00B3164B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DD8ECD21CB5F65C00B3164B /* HelloKii-iOS-Swift */;
+			targetProxy = 4DD8ECE81CB5F65D00B3164B /* PBXContainerItemProxy */;
+		};
+		4DD8ECF41CB5F65D00B3164B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DD8ECD21CB5F65C00B3164B /* HelloKii-iOS-Swift */;
+			targetProxy = 4DD8ECF31CB5F65D00B3164B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4DD8ECDA1CB5F65C00B3164B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DD8ECDB1CB5F65C00B3164B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DD8ECF91CB5F65D00B3164B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4DD8ECFA1CB5F65D00B3164B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DD8ECFC1CB5F65D00B3164B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "HelloKii-iOS-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii.swift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloKii-iOS-Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4DD8ECFD1CB5F65D00B3164B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "HelloKii-iOS-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii.swift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloKii-iOS-Swift-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		4DD8ECFF1CB5F65D00B3164B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "HelloKii-iOS-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kii.HelloKii-iOS-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS-Swift.app/HelloKii-iOS-Swift";
+			};
+			name = Debug;
+		};
+		4DD8ED001CB5F65D00B3164B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "HelloKii-iOS-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kii.HelloKii-iOS-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS-Swift.app/HelloKii-iOS-Swift";
+			};
+			name = Release;
+		};
+		4DD8ED021CB5F65D00B3164B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "HelloKii-iOS-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kii.HelloKii-iOS-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "HelloKii-iOS-Swift";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		4DD8ED031CB5F65D00B3164B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "HelloKii-iOS-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kii.HelloKii-iOS-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "HelloKii-iOS-Swift";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DD8ECCE1CB5F65C00B3164B /* Build configuration list for PBXProject "HelloKii-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DD8ECF91CB5F65D00B3164B /* Debug */,
+				4DD8ECFA1CB5F65D00B3164B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DD8ECFB1CB5F65D00B3164B /* Build configuration list for PBXNativeTarget "HelloKii-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DD8ECFC1CB5F65D00B3164B /* Debug */,
+				4DD8ECFD1CB5F65D00B3164B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DD8ECFE1CB5F65D00B3164B /* Build configuration list for PBXNativeTarget "HelloKii-iOS-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DD8ECFF1CB5F65D00B3164B /* Debug */,
+				4DD8ED001CB5F65D00B3164B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DD8ED011CB5F65D00B3164B /* Build configuration list for PBXNativeTarget "HelloKii-iOS-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DD8ED021CB5F65D00B3164B /* Debug */,
+				4DD8ED031CB5F65D00B3164B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DD8ECCB1CB5F65C00B3164B /* Project object */;
+}
