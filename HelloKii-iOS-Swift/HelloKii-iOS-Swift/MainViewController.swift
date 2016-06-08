@@ -124,7 +124,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         activityIndicator.startAnimating()
 
         // create an incremented title for the object
-        let value = String(format: "MyObject %d", ++objectCount)
+        objectCount += 1
+        let value = String(format: "MyObject %d", objectCount)
 
         // get a reference to a KiiBucket
         let bucket = KiiUser.currentUser()!.bucketWithName(bucketName)
