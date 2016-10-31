@@ -146,6 +146,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic,readonly) BOOL disabled;
 
+/**Get online status of the thing. NSNumber boolean represenetation. The value will be nil initially until the thing is connected for the first time. If not nil and converted to BOOL, YES if the thing is online, NO otherwise.
+ */
+@property (nonatomic, readonly, nullable) NSNumber* online;
+
+/**Get online status modified date of the thing. The date will be nil initially until the thing is connected for the first time.
+ */
+@property (nonatomic, readonly, nullable) NSDate *onlineStatusModifiedAt;
 
 #pragma mark - constructor
 

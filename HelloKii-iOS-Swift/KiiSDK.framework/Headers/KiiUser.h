@@ -14,13 +14,24 @@
 @class KiiIdentityData;
 @class KiiUserFields;
 @class KiiPushSubscription;
+@class LocaleContainer;
 typedef void (^KiiUserBlock)(KiiUser *_Nullable user, NSError *_Nullable error);
 typedef void (^KiiUserArrayBlock)(KiiUser *_Nonnull user, NSArray *_Nullable , NSError *_Nullable error);
 typedef void (^KiiErrorBlock)(NSError *_Nullable error);
 
 typedef NS_ENUM(NSUInteger, KiiNotificationMethod) {
+    /** Send email include link URL to reset the password.
+     Reset password is done by clicking the link in email.
+     */
     KiiEMAIL,
-    KiiSMS
+    /** Send SMS includes the link URL to reset the password.
+     Reset password is done by clicking the link in SMS.
+     */
+    KiiSMS,
+    /** Send SMS includes the PIN Code to registered phone number.
+     Reset password is done by sending PIN code in received SMS.
+     */
+    KiiSMS_PIN
 };
 
 /** Contains user profile/account information and methods
@@ -28,7 +39,7 @@ typedef NS_ENUM(NSUInteger, KiiNotificationMethod) {
  The user class allows an application to generate a user, register them with the server and log them in during subsequent sessions. Since KiiUser is similar to <KiiObject>, the application can also set key/value pairs to this user.
  */
 
-@class KiiBucket, KiiFileBucket, KiiTopic,KiiEncryptedBucket;
+@class KiiBucket, KiiTopic,KiiEncryptedBucket;
 @interface KiiUser: NSObject<KiiThingOwner>
 NS_ASSUME_NONNULL_BEGIN
 /** The unique ID of the KiiUser object, assigned by the server*/
@@ -59,8 +70,28 @@ NS_ASSUME_NONNULL_BEGIN
 /** Email address to use for authentication or for display */
 @property (readonly,nullable) NSString * email;
 
+/** Email address that has not been verified.
+
+ * When the user's email has been changed and email verification is required in
+ * you app configuration, New email is stored as pending email.
+ * After the new email has been verified, the address can be obtained by 
+ * <[KiiUser email]>.
+ * @see [KiiUser email], [KiiUser changeEmailSynchronous:withError:]
+ */
+@property (readonly,nullable) NSString * pendingEmail;
+
 /** Phone number to use for authentication or for display */
 @property (readonly,nullable) NSString * phoneNumber;
+
+/** Phone number that has not been verified.
+
+ * When the user's phone has been changed and phone verification is required in 
+ * your app configuration, New phone is stored as pending phone.
+ * After the new phone has been verified, the number can be obtained by
+ * <[KiiUser phoneNumber]>.
+ * @see [KiiUser phoneNumber], [KiiUser changePhoneSynchronous:withError:]
+ */
+@property (readonly,nullable) NSString * pendingPhoneNumber;
 
 /** The country code associated with this user */
 @property (nonatomic, nullable) NSString * country;
@@ -102,6 +133,9 @@ NS_ASSUME_NONNULL_BEGIN
  @return A Dictionary of <KiiSocialAccountInfo> that is informations from the providers linked with this user.
  */
 @property(nonatomic,readonly) NSDictionary* linkedSocialAccounts;
+
+/** Locale of the user. nil if the user registered without locale. */
+@property(nonatomic, nullable)  LocaleContainer *locale;
 
 /** Create a user object to prepare for registration with credentials pre-filled
  Creates an pre-filled user object for manipulation. This user will not be authenticated until one of the authentication methods are called on it. Custom fields can be added to it before it is registered or authenticated.
@@ -483,7 +517,20 @@ NS_ASSUME_NONNULL_BEGIN
             // Succeeded.
         }
     }];
- @note This method just restores the predefined fields locally. If you want to get custom fields, you need to access server by calling <[KiiUser refreshWithBlock:]>
+ @note Follwing properties are stored/loaded.<br>
+ You may need to fetch other properties by  <[KiiUser refreshWithBlock:]> when you access to other properites.<br>
+
+ - username
+ - displayName
+ - email
+ - emailVerified
+ - pendingEmail
+ - phoneNumber
+ - phoneVerified
+ - pendingPhone
+ - country
+ - refreshToken
+
  @note Prior to v2.2.2, KiiSDK stored user credentials with kSecAttrAccessibleWhenUnlock,
  so saving or loading user credentials would fail when device was unlocked. From v2.2.2,
  KiiSDK stores user credentials with kSecAttrAccessibleAfterFirstUnlock, which means 
@@ -502,8 +549,52 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable KiiUser *) authenticateWithStoredCredentialsSynchronous:(NSError *_Nullable*_Nullable) error;
 
+/** Asynchronously authenticates a user with the server using specified access token. This method is non-blocking.
+
+
+ [KiiUser authenticateWithToken:@"my-user-token"
+                   refreshToken: @"my-refresh-token"
+                      expiresAt: expiresAt
+                          block:^(KiiUser *user, NSError *error) {
+     if(error == nil) {
+         NSLog(@"Authenticated user: %@", user);
+     }
+ }];
+
+ If successful, the user is cached inside SDK as current user and accessible
+ via <[KiiUser currentUser]>.
+
+ @param accessToken A valid access token associated with the desired user.
+ @param refreshToken A valid refresh token for the user.
+ @param expiresAt Access token expire time.
+ @param block The block to be called upon method completion. See example.
+ @return The KiiUser object that was authenticated. nil if failed to authenticate.
+ */
++ (void) authenticateWithToken:(NSString *)accessToken
+                     expiresAt:(NSDate*) expiresAt
+                  refreshToken:(NSString* )refreshToken
+                         block:(KiiUserBlock)block;
+
+/** Synchronously authenticates a user with the server using specified access token and refresh token. This method is blocking.
+
+ If successful, the user is cached inside SDK as current user and accessible
+ via <[KiiUser currentUser]>.
+
+ @param accessToken A valid access token associated with the desired user.
+ @param refreshToken A valid refresh token for the user.
+ @param expiresAt Access token expire time.
+ @param error used to return an error by reference (pass NULL if this is not desired). It is recommended to set an actual error object to get the error information.
+ @return The KiiUser object that was authenticated. nil if failed to authenticate.
+ */
++ (nullable KiiUser*) authenticateWithTokenSynchronous:(NSString*)accessToken
+                                             expiresAt:(NSDate*)expiresAt
+                                          refreshToken: (NSString *) refreshToken
+                                                 error:(NSError*_Nullable*_Nullable)error;
+
++ (nullable KiiUser *) authenticateWithStoredCredentialsSynchronous:(NSError *_Nullable*_Nullable) error;
+
 /** Asynchronously registers a user object with the server
- 
+
  Registers a user with the server. The user object must have an associated email/password combination. This method is non-blocking.
  If the specified token is expired, authenticataiton will be failed.
  Authenticate the user again to renew the token.
@@ -678,8 +769,8 @@ NS_ASSUME_NONNULL_BEGIN
  This api does not execute login after reset.
  @param userIdentifier should be valid email address, global phone number or
  user identifier obtained by <userID>
- @param notificationMethod specify destination of message includes reset password
- link url.
+ @param notificationMethod Specify reset notification method.<br>
+ For details, please refer to <KiiNotificationMethod> document.<br>
  different type of identifier and destination can be used as long as user have 
  verified email, phone.
  (ex. User registers both email and phone. Identifier is email and 
@@ -697,8 +788,8 @@ NS_ASSUME_NONNULL_BEGIN
  This api does not execute login after reset.<br>
  @param userIdentifier should be valid email address, global phone number or
  user identifier obtained by <userID>
- @param notificationMethod specify destination of message includes reset password
- link url.
+ @param notificationMethod Specify reset notification method.<br>
+ For details, please refer to <KiiNotificationMethod> document.<br>
  different type of identifier and destination can be used as long as user have
  verified email, phone.
  (ex. User registers both email and phone. Identifier is email and
@@ -709,6 +800,46 @@ NS_ASSUME_NONNULL_BEGIN
 + (void) resetPassword:(NSString*)userIdentifier
       notificationMethod:(KiiNotificationMethod)notificationMethod
                  block:(KiiErrorBlock)block;
+
+
+/** Reset password with the PIN code in receipt SMS.
+ After <[KiiUser:resetPasswordSynchronous:notificationMethod:error]> is called
+ with SMS_PIN notification method and completed, SMS includes PIN code will be
+ sent to user's phone.<br>
+ User can set a new password for login with the PIN code.
+ Please call authenticate method to login with the new password after the new
+ password is determined.
+ @param userIdentifier should be valid email address, global phone number or
+ user identifier obtained by <userID>
+ @param password new password for login. If the 'Password Reset Flow' is set to
+ 'Generate Password' in you app's Security settings, It would be ignored and you
+ can pass nil for this parameter.
+ In this case, password is generaged on Kii Cloud and sent to user's phone.
+ Otherwise valid password is required.
+ @param pinCode Received PIN code.
+ @param error used to return an error by reference.
+ Recommend to set nonnull error pointer reference to get the error information.
+ @return YES if succeeded, NO otherwise.
+ */
++ (BOOL) completeResetPasswordSynchronous:(NSString*)userIdentifier
+                                  pinCode:(NSString*)pinCode
+                                 password:(nullable NSString*)password
+                                    error:(NSError*_Nullable*_Nullable)error;
+
+/** Asynchronous version of
+ <[KiiUser completeResetPasswordSynchronous:pinCode:password:error]>
+ @param userIdentifier should be valid email address, global phone number or
+ user identifier obtained by <userID>
+ @param password new password for login. If the 'Password Reset Flow' is set to
+ 'Generate Password' in you app's Security settings, It would be ignored and you
+ can pass nil for this parameter. Otherwise valid password is required.
+ @param pinCode Received PIN code.
+ @param block called upon method completion.
+ */
++ (void) completeResetPassword:(NSString*)userIdentifier
+                       pinCode:(NSString*)pinCode
+                      password:(nullable NSString*)password
+                         block:(KiiErrorBlock)block;
 
 /** Asynchronously verify the current user's phone number
  
@@ -942,15 +1073,6 @@ NS_ASSUME_NONNULL_BEGIN
  @exception NSInvalidArgumentException when bucketName is not acceptable format. For details please refer to <[KiiBucket isValidBucketName:(NSString*) bucketName]>.
  */
 - (KiiEncryptedBucket*) encryptedBucketWithName:(NSString*)bucketName;
-
-
-/** Get or create a file bucket at the user level
- 
- @param bucketName The name of the file bucket you'd like to use
- @return An instance of a working <KiiFileBucket>
- @deprecated This method is deprecated. Use <[KiiUser bucketWithName:]> instead.
- */
-- (KiiFileBucket*) fileBucketWithName:(NSString*)bucketName __attribute__((deprecated("Use [KiiUser bucketWithName:] instead.")));
 
 /** Get or create a Push notification topic at the user level
  
@@ -1301,12 +1423,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /** Updates the user's email address on the server
- 
+
+ If the email address verification is required by your app configuration,<br>
+ User's email would not changed to new one until the new email verification has
+ been done.<br>
+ In this case, new mail address can be obtained by
+ <[KiiUser pendingEmail]>.<br>
+ This API does not refresh the KiiUser automatically.<br>
+ Please execute <[KiiUser refresh:]> before checking the value of
+ <[KiiUser email]> or <[KiiUser pendingEmail]>.<br>
  This is a blocking method.
  @param newEmail The new email address to change to
  @param error used to return an error by reference (pass NULL if this is not desired). It is recommended to set an actual error object to get the error information.
  @return YES if succeeded, NO otherwise.
- **/
+ @see  [KiiUser email], [KiiUser pendingEmail]
+ 
+ */
 - (BOOL) changeEmailSynchronous:(NSString*)newEmail withError:(NSError*_Nullable*_Nullable)error;
 
 /** Updates the user's phone number on the server
@@ -1348,12 +1480,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /** Updates the user's phone number on the server
- 
+
+ If the phone number verification is required by your app configuration,<br>
+ User's phone number would not changed to new one until the new phone number
+ verification has been done.<br>
+ In this case, new phone can be obtained by <[KiiUser pendingPhoneNumber]>.<br>
+ This API does not refresh the KiiUser automatically.<br>
+ Please execute {@link #refresh()} before checking the value of
+ <[KiiUser phoneNumber]> or <[KiiUser pendingPhoneNumber]>. <br>
  This is a blocking method.
  @param newPhoneNumber The new phone number to change to
  @param error used to return an error by reference (pass NULL if this is not desired). It is recommended to set an actual error object to get the error information.
  @return YES if succeeded, NO otherwise.
- **/
+ @see [KiiUser phoneNumber], [KiiUser pendingPhoneNumber]
+
+ */
 - (BOOL) changePhoneSynchronous:(NSString*)newPhoneNumber withError:(NSError*_Nullable*_Nullable)error;
 
 

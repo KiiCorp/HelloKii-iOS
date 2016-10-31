@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "KiiRTransferInfo.h"
-#import "KiiFile.h"
 #import "FileHolder.h"
 
 @protocol KiiRTransfer;

@@ -57,6 +57,10 @@
  - *332* - ACAccount authentication is not granted by user
  - *333* - ACAccount is not set by user
  - *340* - User is not logged, this operations does not allow anonymous user.
+ - *341* - Given PIN Code is invalid.
+ - *342* - New Password is required
+ - *343* - New Password is same as old one.
+ - *344* - Given PIN Code is expired.
  
  <h3>File API Errors (4xx)</h3>
  - *401* - Unable to delete file from cloud
@@ -296,6 +300,14 @@
 
 /* User is not logged, this operations does not allow anonymous user. */
 + (NSInteger) codeLoginRequired;
+/* Given PIN Code is invalid format string. */
++ (NSInteger) codeInvalidPinCode;
+/* Password is required to reset password */
++ (NSInteger) codePasswordRequired;
+/* Password is same as old one */
++ (NSInteger) codeNewPasswordIsSameAsOldOne;
+/* Given PIN Code is expired. */
++ (NSInteger) codePINCodeIsExpired;
 
 #pragma mark - 400 codes (File API Errors)
 /* File API Errors (4xx) */

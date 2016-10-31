@@ -13,41 +13,6 @@
 #import "KAFilter.h"
 #import "KADateRange.h"
 
-#ifndef KII_SWIFT_ENVIRONMENT
-/**
- * This enum represents KiiCloud server location.
- */
-typedef NS_ENUM(NSUInteger, KiiAnalyticsSite ) {
-
-    /** Use cloud in US. */
-    kiiAnalyticsSiteUS=0,
-    /** Use cloud in Japan. */
-    kiiAnalyticsSiteJP,
-    /** Use cloud in China. */
-    kiiAnalyticsSiteCN,
-    /** Use cloud in Singapore. */
-    kiiAnalyticsSiteSG,
-    /** Use cloud in cn3 site of China. */
-    kiiAnalyticsSiteCN3
-};
-#else
-/**
- * This enum represents KiiCloud server location.
- */
-typedef NS_ENUM(NSUInteger, KiiAnalyticsSite ) {
-    /** Use cloud in US. */
-    KiiAnalyticsUS,
-    /** Use cloud in Japan. */
-    KiiAnalyticsJP,
-    /** Use cloud in China. */
-    KiiAnalyticsCN,
-    /** Use cloud in Singapore. */
-    KiiAnalyticsSG
-};
-#endif
-
-
-
 typedef void (^KAResultBlock)(KAGroupedResult *_Nullable results, NSError *_Nullable error);
 
 /** The main SDK class
