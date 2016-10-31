@@ -227,13 +227,16 @@
 					4DD8ECD21CB5F65C00B3164B = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = N5QLD3RVE2;
+						LastSwiftMigration = 0810;
 					};
 					4DD8ECE61CB5F65D00B3164B = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 4DD8ECD21CB5F65C00B3164B;
 					};
 					4DD8ECF11CB5F65D00B3164B = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 4DD8ECD21CB5F65C00B3164B;
 					};
 				};
@@ -436,6 +439,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloKii-iOS-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -454,6 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloKii-iOS-Swift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -465,6 +470,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kii.HelloKii-iOS-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS-Swift.app/HelloKii-iOS-Swift";
 			};
 			name = Debug;
@@ -477,6 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kii.HelloKii-iOS-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS-Swift.app/HelloKii-iOS-Swift";
 			};
 			name = Release;
@@ -488,6 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kii.HelloKii-iOS-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "HelloKii-iOS-Swift";
 				USES_XCTRUNNER = YES;
 			};
@@ -500,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kii.HelloKii-iOS-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "HelloKii-iOS-Swift";
 				USES_XCTRUNNER = YES;
 			};
