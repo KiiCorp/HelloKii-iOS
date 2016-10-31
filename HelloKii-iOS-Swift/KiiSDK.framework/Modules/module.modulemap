@@ -1,0 +1,6 @@
+framework module KiiSDK {
+  umbrella header "KiiSDK.h"
+
+  export *
+  module * { export * }
+}
