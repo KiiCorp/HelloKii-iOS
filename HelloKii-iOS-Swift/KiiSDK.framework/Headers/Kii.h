@@ -13,8 +13,6 @@
 #import "KiiObject.h"
 #import "KiiUser.h"
 #import "KiiGroup.h"
-#import "KiiFile.h"
-#import "KiiFileBucket.h"
 #import "KiiClause.h"
 #import "KiiQuery.h"
 #import "KiiAnyAuthenticatedUser.h"
@@ -63,11 +61,13 @@
 #import "KiiListResult.h"
 #import "KiiAnalytics.h"
 #import "KiiUserBuilder.h"
+#import "LocaleContainer.h"
 
 
-@class KiiFile, KiiUser, KiiBucket, KiiGroup;
+@class KiiUser, KiiBucket, KiiGroup;
 
-#ifndef KII_SWIFT_ENVIRONMENT
+
+
 /**
 * This enum represents KiiCloud server location.
 * This is used for <[Kii beginWithID:andKey:andSite:]>.
@@ -75,34 +75,19 @@
 typedef NS_ENUM(NSUInteger, KiiSite) {
 
     /** Use cloud in US. */
-    kiiSiteUS = 0,
+    kiiSiteUS NS_SWIFT_NAME(US),
     /** Use cloud in Japan. */
-    kiiSiteJP,
+    kiiSiteJP NS_SWIFT_NAME(JP),
     /** Use cloud in China. */
-    kiiSiteCN,
+    kiiSiteCN NS_SWIFT_NAME(CN),
     /** Use cloud in Singapore. */
-    kiiSiteSG,
+    kiiSiteSG NS_SWIFT_NAME(SG),
     /** Use cloud in cn3 site of China. */
-    kiiSiteCN3
+    kiiSiteCN3 NS_SWIFT_NAME(CN3),
+    /** Use cloud in EU */
+    kiiSiteEU NS_SWIFT_NAME(EU)
 };
-#else
-/**
- * This enum represents KiiCloud server location.
- * This is used for <[Kii beginWithID:andKey:andSite:]>.
- */
-typedef NS_ENUM(NSUInteger, KiiSite) {
-    /** Use cloud in US. */
-    KiiUS,
-    /** Use cloud in Japan. */
-    KiiJP,
-    /** Use cloud in China. */
-    KiiCN,
-    /** Use cloud in Singapore. */
-    KiiSG,
-    /** Use cloud in cn3 site of China. */
-    KiiCN3
-};
-#endif
+
 
 NS_ASSUME_NONNULL_BEGIN
 /** The main SDK class
@@ -129,8 +114,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param appId The application ID found in your Kii developer console
  @param appKey The application key found in your Kii developer console
  @param kiiSite One of the enumerator constants kiiSiteUS (United States),
- kiiSiteJP (Japan), kiiSiteCN (China) or kiiSiteSG (Singapore) based
- on your desired location.
+ kiiSiteJP (Japan), kiiSiteCN3 (China), kiiSiteSG (Singapore) or
+ kiiSiteEU (Europe) based on your desired location.
  */
 + (void) beginWithID:(NSString*)appId andKey:(NSString*)appKey andSite:(KiiSite)kiiSite;
 + (void) beginWithID:(NSString*)appId andKey:(NSString*)appKey andCustomURL:(NSString*)customURL;

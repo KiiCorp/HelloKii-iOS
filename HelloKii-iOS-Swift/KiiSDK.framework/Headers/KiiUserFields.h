@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class LocaleContainer;
 
 @interface KiiUserFields : NSObject
 NS_ASSUME_NONNULL_BEGIN
@@ -14,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** The country code associated with this user */
 @property (nonatomic, nullable) NSString * country;
+
+/** LocaleContainer of this user */
+@property (nonatomic, nullable) LocaleContainer *locale;
 
 /** Sets a key/value pair to a KiiUser
 

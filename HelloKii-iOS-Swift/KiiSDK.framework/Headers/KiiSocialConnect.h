@@ -14,110 +14,53 @@
 @class KiiUser;
 @class KiiSCNQQ;
 
-#ifndef KII_SWIFT_ENVIRONMENT
+
 /**
 * This enum represents social networks identifier.
 */
 typedef NS_ENUM(NSUInteger, KiiSocialNetworkName) {
     /** Use Facebook */
-    kiiSCNFacebook = 100,
+    kiiSCNFacebook NS_SWIFT_NAME(SCNFacebook) = 100,
     /** Use Twitter */
-    kiiSCNTwitter = 101,
+    kiiSCNTwitter NS_SWIFT_NAME(SCNTwitter) = 101,
     /** Use QQ */
-    kiiSCNQQ = 102,
+    kiiSCNQQ NS_SWIFT_NAME(SCNQQ) = 102,
     /** Use Kii Social Network Connect */
-    kiiSCNConnector = 103
+    kiiSCNConnector NS_SWIFT_NAME(SCNConnector) = 103
 };
-#else
-/**
- * This enum represents social networks identifier.
- */
-typedef NS_ENUM(NSUInteger, KiiSocialNetworkName) {
-    /** Use Facebook */
-    SCNFacebook = 100,
-    /** Use Twitter */
-    SCNTwitter = 101,
-    /** Use QQ*/
-    SCNQQ = 103,
-    /** Use Kii Social Network Connect */
-    SCNConnector = 104
-};
-#endif
     
-
-#ifndef KII_SWIFT_ENVIRONMENT
-/**
- * This enum represents social network that is supported by Kii Social Network Connector
- */
 typedef NS_ENUM(NSUInteger, KiiConnectorProvider) {
     /** Use Facebook to authenticate */
-    kiiConnectorFacebook,
+    kiiConnectorFacebook NS_SWIFT_NAME(Facebook),
     /** Use Twitter to authenticate */
-    kiiConnectorTwitter,
+    kiiConnectorTwitter NS_SWIFT_NAME(Twitter),
     /** Use LinkedIn to authenticate */
-    kiiConnectorLinkedIn,
+    kiiConnectorLinkedIn NS_SWIFT_NAME(LinkedIn),
     /** Use Yahoo to authenticate */
-    kiiConnectorYahoo,
+    kiiConnectorYahoo NS_SWIFT_NAME(Yahoo),
     /** Use Google to authenticate @deprecated Please use kiiConnectorGoogleplus instead*/
-    kiiConnectorGoogle,
+    kiiConnectorGoogle NS_SWIFT_NAME(Google),
     /** Use Dropbox to authenticate */
-    kiiConnectorDropbox,
+    kiiConnectorDropbox NS_SWIFT_NAME(Dropbox),
     /** Use Box to authenticate */
-    kiiConnectorBox,
+    kiiConnectorBox NS_SWIFT_NAME(Box),
     /** Use Renren to authenticate */
-    kiiConnectorRenren,
+    kiiConnectorRenren NS_SWIFT_NAME(Renren),
     /** Use Sina Weibo to authenticate */
-    kiiConnectorSina,
+    kiiConnectorSina NS_SWIFT_NAME(Sina),
     /** Use Live to authenticate */
-    kiiConnectorLive,
+    kiiConnectorLive NS_SWIFT_NAME(Live),
     /** Use QQ to authenticate. */
-    kiiConnectorQQ,
+    kiiConnectorQQ NS_SWIFT_NAME(QQ),
     /** Use Googleplus to authenticate. */
-    kiiConnectorGoogleplus,
+    kiiConnectorGoogleplus NS_SWIFT_NAME(Googleplus),
     /** Use Open ID provider configured for the App.
      * It is configurable only with Kii Cloud Enterprise subscription.
      */
-    kiiConnectorOpenIDConnectSimple,
+    kiiConnectorOpenIDConnectSimple NS_SWIFT_NAME(OpenIDConnectSimple),
     /** Use Kii to authenticate. */
-    kiiConnectorKii
+    kiiConnectorKii NS_SWIFT_NAME(Kii)
 };
-#else
-/**
- * This enum represents social network that is supported by Kii Social Network Connector
- */
-typedef NS_ENUM(NSUInteger, KiiConnectorProvider) {
-    /** Use Facebook to authenticate */
-    KiiFacebook,
-    /** Use Twitter to authenticate */
-    KiiTwitter,
-    /** Use LinkedIn to authenticate */
-    KiiLinkedIn,
-    /** Use Yahoo to authenticate */
-    KiiYahoo,
-    /** Use Google to authenticate */
-    KiiGoogle __attribute__((deprecated("Please use kiiConnectorGoogleplus instead"))),
-    /** Use Dropbox to authenticate */
-    KiiDropbox,
-    /** Use Box to authenticate */
-    KiiBox,
-    /** Use Renren to authenticate */
-    KiiRenren,
-    /** Use Sina Weibo to authenticate */
-    KiiSina,
-    /** Use Live to authenticate */
-    KiiLive,
-    /** Use QQ to authenticate */
-    KiiQQ,
-    /** Use Googleplus to authenticate. */
-    KiiGoogleplus,
-    /** Use Open ID provider configured for the App.
-     * It is configurable only with Kii Cloud Enterprise subscription.
-     */
-    KiiOpenIDConnectSimple,
-    /** Use Kii to authenticate. */
-    KiiKii
-};
-#endif
 
 
 /**

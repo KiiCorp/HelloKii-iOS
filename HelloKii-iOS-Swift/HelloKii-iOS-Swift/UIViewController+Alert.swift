@@ -21,7 +21,7 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func showMessage(message: String, error: NSError?) {
+    func showMessage(_ message: String, error: NSError?) {
         // format the message
         let alertMessage : String
         if let description = error?.userInfo["description"] as? String {
@@ -31,8 +31,8 @@ extension UIViewController {
         }
 
         // show an alert dialog
-        let alert = UIAlertController(title: nil, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        presentViewController(alert, animated: true, completion: nil)
+        let alert = UIAlertController(title: nil, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

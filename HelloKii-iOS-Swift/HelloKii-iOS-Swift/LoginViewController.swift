@@ -18,6 +18,7 @@
 //
 
 import UIKit
+import KiiSDK
 
 class LoginViewController: UIViewController {
 
@@ -33,11 +34,11 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func onTap(sender: UITapGestureRecognizer) {
+    @IBAction func onTap(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
 
-    @IBAction func signupButtonPressed(sender: UIButton) {
+    @IBAction func signupButtonPressed(_ sender: UIButton) {
         // show the activity indicator
         activityIndicator.startAnimating()
 
@@ -49,22 +50,22 @@ class LoginViewController: UIViewController {
         let user = KiiUser(username: username, andPassword: password)
 
         // register the user asynchronously
-        user.performRegistrationWithBlock { (user, error) -> Void in
+        user.performRegistration { (user, error) -> Void in
             // hide the activity indicator(configured "Hides When Stopped" in storyboard)
             self.activityIndicator.stopAnimating()
 
             // check for an error(successful request if error==nil)
             if error != nil {
-                self.showMessage("Sign up failed", error: error)
+                self.showMessage("Sign up failed", error: error as NSError?)
                 return
             }
 
             // go to the main screen
-            self.performSegueWithIdentifier("OpenMainPage", sender: nil)
+            self.performSegue(withIdentifier: "OpenMainPage", sender: nil)
         }
     }
 
-    @IBAction func loginButtonPressed(sender: UIButton) {
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
         // show the activity indicator
         activityIndicator.startAnimating()
 
@@ -79,12 +80,12 @@ class LoginViewController: UIViewController {
 
             // check for an error(successful request if error==nil)
             if error != nil {
-                self.showMessage("login failed", error: error)
+                self.showMessage("login failed", error: error as NSError?)
                 return
             }
 
             // go to the main screen
-            self.performSegueWithIdentifier("OpenMainPage", sender: nil)
+            self.performSegue(withIdentifier: "OpenMainPage", sender: nil)
         }
     }
 
