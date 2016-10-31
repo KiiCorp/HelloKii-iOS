@@ -18,6 +18,7 @@
 //
 
 import UIKit
+import KiiSDK
 
 class LoginViewController: UIViewController {
 

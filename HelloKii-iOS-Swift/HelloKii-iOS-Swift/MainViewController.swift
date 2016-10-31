@@ -18,6 +18,7 @@
 //
 
 import UIKit
+import KiiSDK
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!

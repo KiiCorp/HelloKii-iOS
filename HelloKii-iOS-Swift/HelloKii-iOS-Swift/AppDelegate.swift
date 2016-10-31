@@ -18,6 +18,7 @@
 //
 
 import UIKit
+import KiiSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,8 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
         // Initialize the  SDK!
-        Kii.begin(withID: "__KII_APP_ID__", andKey: "__KII_APP_KEY__", andSite: .US)
+        Kii.begin(withID: "__KII_APP_ID__", andKey: "__KII_APP_KEY__", andSite: __KII_APP_SITE__)
 
         return true
     }
