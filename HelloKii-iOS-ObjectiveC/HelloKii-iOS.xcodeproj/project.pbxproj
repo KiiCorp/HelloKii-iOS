@@ -1,480 +1,1197 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		4D532DBB1D053B9000DC4956 /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D532DBA1D053B9000DC4956 /* KiiSDK.framework */; };
-		4DBE9A971B71EC1F00C67A06 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE9A961B71EC1F00C67A06 /* MainViewController.m */; };
-		4DD8ECC91CB39C6E00B3164B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8ECC81CB39C6E00B3164B /* libsqlite3.tbd */; };
-		4DEF11231B69F5B2001895DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF11221B69F5B2001895DB /* main.m */; };
-		4DEF11261B69F5B2001895DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF11251B69F5B2001895DB /* AppDelegate.m */; };
-		4DEF112C1B69F5B2001895DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF112A1B69F5B2001895DB /* Main.storyboard */; };
-		4DEF112E1B69F5B2001895DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF112D1B69F5B2001895DB /* Images.xcassets */; };
-		4DEF113D1B69F5B2001895DB /* HelloKii_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF113C1B69F5B2001895DB /* HelloKii_iOSTests.m */; };
-		4DEF11481B69F6FB001895DB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF11471B69F6FB001895DB /* LoginViewController.m */; };
-		4DEF11541B6A32E0001895DB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF114E1B6A32E0001895DB /* Accounts.framework */; };
-		4DEF11551B6A32E0001895DB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF114F1B6A32E0001895DB /* ImageIO.framework */; };
-		4DEF11571B6A32E0001895DB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11511B6A32E0001895DB /* MobileCoreServices.framework */; };
-		4DEF11581B6A32E0001895DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11521B6A32E0001895DB /* Security.framework */; };
-		4DEF11591B6A32E0001895DB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF11531B6A32E0001895DB /* Social.framework */; };
-		4DEF115F1B6B23CF001895DB /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF115E1B6B23CF001895DB /* UIViewController+Alert.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4DEF11371B69F5B2001895DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DEF11151B69F5B1001895DB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4DEF111C1B69F5B1001895DB;
-			remoteInfo = "HelloKii-iOS";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		4D532DBA1D053B9000DC4956 /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
-		4DBE9A951B71EC1F00C67A06 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		4DBE9A961B71EC1F00C67A06 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		4DD8ECC81CB39C6E00B3164B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		4DEF111D1B69F5B2001895DB /* HelloKii-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloKii-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DEF11211B69F5B2001895DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DEF11221B69F5B2001895DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4DEF11241B69F5B2001895DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4DEF11251B69F5B2001895DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4DEF112B1B69F5B2001895DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4DEF112D1B69F5B2001895DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4DEF11361B69F5B2001895DB /* HelloKii-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HelloKii-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DEF113B1B69F5B2001895DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DEF113C1B69F5B2001895DB /* HelloKii_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloKii_iOSTests.m; sourceTree = "<group>"; };
-		4DEF11461B69F6FB001895DB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		4DEF11471B69F6FB001895DB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		4DEF114E1B6A32E0001895DB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		4DEF114F1B6A32E0001895DB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		4DEF11511B6A32E0001895DB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		4DEF11521B6A32E0001895DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		4DEF11531B6A32E0001895DB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		4DEF115D1B6B2324001895DB /* UIViewController+Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
-		4DEF115E1B6B23CF001895DB /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		4DEF111A1B69F5B1001895DB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D532DBB1D053B9000DC4956 /* KiiSDK.framework in Frameworks */,
-				4DD8ECC91CB39C6E00B3164B /* libsqlite3.tbd in Frameworks */,
-				4DEF11541B6A32E0001895DB /* Accounts.framework in Frameworks */,
-				4DEF11551B6A32E0001895DB /* ImageIO.framework in Frameworks */,
-				4DEF11571B6A32E0001895DB /* MobileCoreServices.framework in Frameworks */,
-				4DEF11581B6A32E0001895DB /* Security.framework in Frameworks */,
-				4DEF11591B6A32E0001895DB /* Social.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DEF11331B69F5B2001895DB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		4DEF11141B69F5B1001895DB = {
-			isa = PBXGroup;
-			children = (
-				4D532DBA1D053B9000DC4956 /* KiiSDK.framework */,
-				4DD8ECC81CB39C6E00B3164B /* libsqlite3.tbd */,
-				4DEF114E1B6A32E0001895DB /* Accounts.framework */,
-				4DEF114F1B6A32E0001895DB /* ImageIO.framework */,
-				4DEF11511B6A32E0001895DB /* MobileCoreServices.framework */,
-				4DEF11521B6A32E0001895DB /* Security.framework */,
-				4DEF11531B6A32E0001895DB /* Social.framework */,
-				4DEF111F1B69F5B2001895DB /* HelloKii-iOS */,
-				4DEF11391B69F5B2001895DB /* HelloKii-iOSTests */,
-				4DEF111E1B69F5B2001895DB /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		4DEF111E1B69F5B2001895DB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4DEF111D1B69F5B2001895DB /* HelloKii-iOS.app */,
-				4DEF11361B69F5B2001895DB /* HelloKii-iOSTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4DEF111F1B69F5B2001895DB /* HelloKii-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				4DEF11241B69F5B2001895DB /* AppDelegate.h */,
-				4DEF11251B69F5B2001895DB /* AppDelegate.m */,
-				4DEF112A1B69F5B2001895DB /* Main.storyboard */,
-				4DEF112D1B69F5B2001895DB /* Images.xcassets */,
-				4DEF11201B69F5B2001895DB /* Supporting Files */,
-				4DEF11461B69F6FB001895DB /* LoginViewController.h */,
-				4DEF11471B69F6FB001895DB /* LoginViewController.m */,
-				4DEF115D1B6B2324001895DB /* UIViewController+Alert.h */,
-				4DEF115E1B6B23CF001895DB /* UIViewController+Alert.m */,
-				4DBE9A951B71EC1F00C67A06 /* MainViewController.h */,
-				4DBE9A961B71EC1F00C67A06 /* MainViewController.m */,
-			);
-			path = "HelloKii-iOS";
-			sourceTree = "<group>";
-		};
-		4DEF11201B69F5B2001895DB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4DEF11211B69F5B2001895DB /* Info.plist */,
-				4DEF11221B69F5B2001895DB /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4DEF11391B69F5B2001895DB /* HelloKii-iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				4DEF113C1B69F5B2001895DB /* HelloKii_iOSTests.m */,
-				4DEF113A1B69F5B2001895DB /* Supporting Files */,
-			);
-			path = "HelloKii-iOSTests";
-			sourceTree = "<group>";
-		};
-		4DEF113A1B69F5B2001895DB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4DEF113B1B69F5B2001895DB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		4DEF111C1B69F5B1001895DB /* HelloKii-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4DEF11401B69F5B2001895DB /* Build configuration list for PBXNativeTarget "HelloKii-iOS" */;
-			buildPhases = (
-				4DEF11191B69F5B1001895DB /* Sources */,
-				4DEF111A1B69F5B1001895DB /* Frameworks */,
-				4DEF111B1B69F5B1001895DB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "HelloKii-iOS";
-			productName = "HelloKii-iOS";
-			productReference = 4DEF111D1B69F5B2001895DB /* HelloKii-iOS.app */;
-			productType = "com.apple.product-type.application";
-		};
-		4DEF11351B69F5B2001895DB /* HelloKii-iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4DEF11431B69F5B2001895DB /* Build configuration list for PBXNativeTarget "HelloKii-iOSTests" */;
-			buildPhases = (
-				4DEF11321B69F5B2001895DB /* Sources */,
-				4DEF11331B69F5B2001895DB /* Frameworks */,
-				4DEF11341B69F5B2001895DB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4DEF11381B69F5B2001895DB /* PBXTargetDependency */,
-			);
-			name = "HelloKii-iOSTests";
-			productName = "HelloKii-iOSTests";
-			productReference = 4DEF11361B69F5B2001895DB /* HelloKii-iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		4DEF11151B69F5B1001895DB /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "Kii Corporation";
-				TargetAttributes = {
-					4DEF111C1B69F5B1001895DB = {
-						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = N5QLD3RVE2;
-					};
-					4DEF11351B69F5B2001895DB = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 4DEF111C1B69F5B1001895DB;
-					};
-				};
-			};
-			buildConfigurationList = 4DEF11181B69F5B1001895DB /* Build configuration list for PBXProject "HelloKii-iOS" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 4DEF11141B69F5B1001895DB;
-			productRefGroup = 4DEF111E1B69F5B2001895DB /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				4DEF111C1B69F5B1001895DB /* HelloKii-iOS */,
-				4DEF11351B69F5B2001895DB /* HelloKii-iOSTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		4DEF111B1B69F5B1001895DB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DEF112C1B69F5B2001895DB /* Main.storyboard in Resources */,
-				4DEF112E1B69F5B2001895DB /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DEF11341B69F5B2001895DB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		4DEF11191B69F5B1001895DB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DEF11261B69F5B2001895DB /* AppDelegate.m in Sources */,
-				4DBE9A971B71EC1F00C67A06 /* MainViewController.m in Sources */,
-				4DEF11231B69F5B2001895DB /* main.m in Sources */,
-				4DEF11481B69F6FB001895DB /* LoginViewController.m in Sources */,
-				4DEF115F1B6B23CF001895DB /* UIViewController+Alert.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DEF11321B69F5B2001895DB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DEF113D1B69F5B2001895DB /* HelloKii_iOSTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4DEF11381B69F5B2001895DB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4DEF111C1B69F5B1001895DB /* HelloKii-iOS */;
-			targetProxy = 4DEF11371B69F5B2001895DB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4DEF112A1B69F5B2001895DB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DEF112B1B69F5B2001895DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		4DEF113E1B69F5B2001895DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		4DEF113F1B69F5B2001895DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4DEF11411B69F5B2001895DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = "HelloKii-iOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-			};
-			name = Debug;
-		};
-		4DEF11421B69F5B2001895DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = "HelloKii-iOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		4DEF11441B69F5B2001895DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "HelloKii-iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS";
-			};
-			name = Debug;
-		};
-		4DEF11451B69F5B2001895DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "HelloKii-iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kii.hellokii;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS";
-				"TEST_HOST[sdk=*]" = "$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		4DEF11181B69F5B1001895DB /* Build configuration list for PBXProject "HelloKii-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4DEF113E1B69F5B2001895DB /* Debug */,
-				4DEF113F1B69F5B2001895DB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4DEF11401B69F5B2001895DB /* Build configuration list for PBXNativeTarget "HelloKii-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4DEF11411B69F5B2001895DB /* Debug */,
-				4DEF11421B69F5B2001895DB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4DEF11431B69F5B2001895DB /* Build configuration list for PBXNativeTarget "HelloKii-iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4DEF11441B69F5B2001895DB /* Debug */,
-				4DEF11451B69F5B2001895DB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 4DEF11151B69F5B1001895DB /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>09EE8747AD9AA19448F80341</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-HelloKii-iOS.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-HelloKii-iOS/Pods-HelloKii-iOS.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0C87FBD1BB8425E0D024A6EF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-HelloKii-iOS/Pods-HelloKii-iOS-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>204AD5655DC97BAE8CF9D9F7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-HelloKii-iOS/Pods-HelloKii-iOS-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>32FC8C81B945C2ACE4FCA0FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A80D3634DC65CB2D95A329FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DBE9A951B71EC1F00C67A06</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MainViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DBE9A961B71EC1F00C67A06</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MainViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DBE9A971B71EC1F00C67A06</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DBE9A961B71EC1F00C67A06</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DD8ECC81CB39C6E00B3164B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.text-based-dylib-definition</string>
+			<key>name</key>
+			<string>libsqlite3.tbd</string>
+			<key>path</key>
+			<string>usr/lib/libsqlite3.tbd</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4DD8ECC91CB39C6E00B3164B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DD8ECC81CB39C6E00B3164B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF11141B69F5B1001895DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4DD8ECC81CB39C6E00B3164B</string>
+				<string>4DEF114E1B6A32E0001895DB</string>
+				<string>4DEF114F1B6A32E0001895DB</string>
+				<string>4DEF11511B6A32E0001895DB</string>
+				<string>4DEF11521B6A32E0001895DB</string>
+				<string>4DEF11531B6A32E0001895DB</string>
+				<string>4DEF111F1B69F5B2001895DB</string>
+				<string>4DEF11391B69F5B2001895DB</string>
+				<string>4DEF111E1B69F5B2001895DB</string>
+				<string>E8E08DBC159DBA05EA7AE497</string>
+				<string>32FC8C81B945C2ACE4FCA0FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF11151B69F5B1001895DB</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0710</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Kii Corporation</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>4DEF111C1B69F5B1001895DB</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.4</string>
+						<key>DevelopmentTeam</key>
+						<string>N5QLD3RVE2</string>
+					</dict>
+					<key>4DEF11351B69F5B2001895DB</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.4</string>
+						<key>TestTargetID</key>
+						<string>4DEF111C1B69F5B1001895DB</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>4DEF11181B69F5B1001895DB</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>4DEF11141B69F5B1001895DB</string>
+			<key>productRefGroup</key>
+			<string>4DEF111E1B69F5B2001895DB</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>4DEF111C1B69F5B1001895DB</string>
+				<string>4DEF11351B69F5B2001895DB</string>
+			</array>
+		</dict>
+		<key>4DEF11181B69F5B1001895DB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4DEF113E1B69F5B2001895DB</string>
+				<string>4DEF113F1B69F5B2001895DB</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>4DEF11191B69F5B1001895DB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4DEF11261B69F5B2001895DB</string>
+				<string>4DBE9A971B71EC1F00C67A06</string>
+				<string>4DEF11231B69F5B2001895DB</string>
+				<string>4DEF11481B69F6FB001895DB</string>
+				<string>4DEF115F1B6B23CF001895DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4DEF111A1B69F5B1001895DB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4DD8ECC91CB39C6E00B3164B</string>
+				<string>4DEF11541B6A32E0001895DB</string>
+				<string>4DEF11551B6A32E0001895DB</string>
+				<string>4DEF11571B6A32E0001895DB</string>
+				<string>4DEF11581B6A32E0001895DB</string>
+				<string>4DEF11591B6A32E0001895DB</string>
+				<string>61CDA8912724E1DEDE17EEA5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4DEF111B1B69F5B1001895DB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4DEF112C1B69F5B2001895DB</string>
+				<string>4DEF112E1B69F5B2001895DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4DEF111C1B69F5B1001895DB</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>4DEF11401B69F5B2001895DB</string>
+			<key>buildPhases</key>
+			<array>
+				<string>A8E9CFB91EDA3ABAE7B9E154</string>
+				<string>4DEF11191B69F5B1001895DB</string>
+				<string>4DEF111A1B69F5B1001895DB</string>
+				<string>4DEF111B1B69F5B1001895DB</string>
+				<string>204AD5655DC97BAE8CF9D9F7</string>
+				<string>0C87FBD1BB8425E0D024A6EF</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>HelloKii-iOS</string>
+			<key>productName</key>
+			<string>HelloKii-iOS</string>
+			<key>productReference</key>
+			<string>4DEF111D1B69F5B2001895DB</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>4DEF111D1B69F5B2001895DB</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>HelloKii-iOS.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>4DEF111E1B69F5B2001895DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4DEF111D1B69F5B2001895DB</string>
+				<string>4DEF11361B69F5B2001895DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF111F1B69F5B2001895DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4DEF11241B69F5B2001895DB</string>
+				<string>4DEF11251B69F5B2001895DB</string>
+				<string>4DEF112A1B69F5B2001895DB</string>
+				<string>4DEF112D1B69F5B2001895DB</string>
+				<string>4DEF11201B69F5B2001895DB</string>
+				<string>4DEF11461B69F6FB001895DB</string>
+				<string>4DEF11471B69F6FB001895DB</string>
+				<string>4DEF115D1B6B2324001895DB</string>
+				<string>4DEF115E1B6B23CF001895DB</string>
+				<string>4DBE9A951B71EC1F00C67A06</string>
+				<string>4DBE9A961B71EC1F00C67A06</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>HelloKii-iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF11201B69F5B2001895DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4DEF11211B69F5B2001895DB</string>
+				<string>4DEF11221B69F5B2001895DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF11211B69F5B2001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF11221B69F5B2001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF11231B69F5B2001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF11221B69F5B2001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF11241B69F5B2001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF11251B69F5B2001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF11261B69F5B2001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF11251B69F5B2001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF112A1B69F5B2001895DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4DEF112B1B69F5B2001895DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF112B1B69F5B2001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF112C1B69F5B2001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF112A1B69F5B2001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF112D1B69F5B2001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF112E1B69F5B2001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF112D1B69F5B2001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF11321B69F5B2001895DB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4DEF113D1B69F5B2001895DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4DEF11331B69F5B2001895DB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4DEF11341B69F5B2001895DB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4DEF11351B69F5B2001895DB</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>4DEF11431B69F5B2001895DB</string>
+			<key>buildPhases</key>
+			<array>
+				<string>4DEF11321B69F5B2001895DB</string>
+				<string>4DEF11331B69F5B2001895DB</string>
+				<string>4DEF11341B69F5B2001895DB</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>4DEF11381B69F5B2001895DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>HelloKii-iOSTests</string>
+			<key>productName</key>
+			<string>HelloKii-iOSTests</string>
+			<key>productReference</key>
+			<string>4DEF11361B69F5B2001895DB</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>4DEF11361B69F5B2001895DB</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>HelloKii-iOSTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>4DEF11371B69F5B2001895DB</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>4DEF11151B69F5B1001895DB</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>4DEF111C1B69F5B1001895DB</string>
+			<key>remoteInfo</key>
+			<string>HelloKii-iOS</string>
+		</dict>
+		<key>4DEF11381B69F5B2001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>4DEF111C1B69F5B1001895DB</string>
+			<key>targetProxy</key>
+			<string>4DEF11371B69F5B2001895DB</string>
+		</dict>
+		<key>4DEF11391B69F5B2001895DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4DEF113C1B69F5B2001895DB</string>
+				<string>4DEF113A1B69F5B2001895DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>HelloKii-iOSTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF113A1B69F5B2001895DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4DEF113B1B69F5B2001895DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF113B1B69F5B2001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF113C1B69F5B2001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>HelloKii_iOSTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF113D1B69F5B2001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF113C1B69F5B2001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF113E1B69F5B2001895DB</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4DEF113F1B69F5B2001895DB</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4DEF11401B69F5B2001895DB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4DEF11411B69F5B2001895DB</string>
+				<string>4DEF11421B69F5B2001895DB</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>4DEF11411B69F5B2001895DB</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>09EE8747AD9AA19448F80341</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>HelloKii-iOS/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.kii.hellokii</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4DEF11421B69F5B2001895DB</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E8DE8EA1D83EFABFC274F78C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>HelloKii-iOS/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.kii.hellokii</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4DEF11431B69F5B2001895DB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4DEF11441B69F5B2001895DB</string>
+				<string>4DEF11451B69F5B2001895DB</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>4DEF11441B69F5B2001895DB</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<string>$(inherited)</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>HelloKii-iOSTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.kii.hellokii</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4DEF11451B69F5B2001895DB</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<string>$(inherited)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>HelloKii-iOSTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.kii.hellokii</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS</string>
+				<key>TEST_HOST[sdk=*]</key>
+				<string>$(BUILT_PRODUCTS_DIR)/HelloKii-iOS.app/HelloKii-iOS</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4DEF11461B69F6FB001895DB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LoginViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF11471B69F6FB001895DB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LoginViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF11481B69F6FB001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF11471B69F6FB001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF114E1B6A32E0001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Accounts.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Accounts.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4DEF114F1B6A32E0001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>ImageIO.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/ImageIO.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4DEF11511B6A32E0001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MobileCoreServices.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/MobileCoreServices.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4DEF11521B6A32E0001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Security.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Security.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4DEF11531B6A32E0001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Social.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Social.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4DEF11541B6A32E0001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF114E1B6A32E0001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF11551B6A32E0001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF114F1B6A32E0001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF11571B6A32E0001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF11511B6A32E0001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF11581B6A32E0001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF11521B6A32E0001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF11591B6A32E0001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF11531B6A32E0001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DEF115D1B6B2324001895DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>UIViewController+Alert.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF115E1B6B23CF001895DB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>UIViewController+Alert.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DEF115F1B6B23CF001895DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DEF115E1B6B23CF001895DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>61CDA8912724E1DEDE17EEA5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A80D3634DC65CB2D95A329FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A80D3634DC65CB2D95A329FE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_HelloKii_iOS.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A8E9CFB91EDA3ABAE7B9E154</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>E8DE8EA1D83EFABFC274F78C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-HelloKii-iOS.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-HelloKii-iOS/Pods-HelloKii-iOS.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E8E08DBC159DBA05EA7AE497</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>09EE8747AD9AA19448F80341</string>
+				<string>E8DE8EA1D83EFABFC274F78C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>4DEF11151B69F5B1001895DB</string>
+</dict>
+</plist>

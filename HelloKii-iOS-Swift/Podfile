@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'HelloKii-iOS-Swift' do
+  pod 'KiiCloud', '~> 2.6.3'
+end
