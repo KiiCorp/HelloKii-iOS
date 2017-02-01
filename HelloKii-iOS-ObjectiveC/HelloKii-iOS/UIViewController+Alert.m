@@ -1,6 +1,6 @@
 //
 //
-// Copyright 2015 Kii Corporation
+// Copyright 2017 Kii Corporation
 // http://kii.com
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,7 +22,7 @@
 @implementation UIViewController (Alert)
 
 - (void)showMessage:(NSString*)message error:(NSError*)error {
-    // format the message
+    // Format the message.
     NSString *alertMessage;
     if (error != nil && error.userInfo[@"description"] != nil) {
         alertMessage = [[message stringByAppendingString:@": "] stringByAppendingString:error.userInfo[@"description"]];
@@ -30,7 +30,7 @@
         alertMessage = message;
     }
     
-    // show an alert dialog
+    // Show an alert dialog.
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
                                                                    message:alertMessage
                                                             preferredStyle:UIAlertControllerStyleAlert];

@@ -1,6 +1,6 @@
 //
 //
-// Copyright 2015 Kii Corporation
+// Copyright 2017 Kii Corporation
 // http://kii.com
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,11 +25,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
-// define the loaded KiiObject
+// Define the object array of KiiObjects.
 @property NSMutableArray *objectList;
 
-// define the object count
-// used to easily see object names incrementing
+// Define the object count to easily see
+// object names incrementing.
 @property int objectCount;
 @end
 
@@ -40,11 +40,11 @@ NSString * const OBJECT_KEY = @"myObjectValue";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // initialize the view
+    // Initialize the view.
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
-    // initialize the data
+    // Initialize the object array.
     self.objectList = [NSMutableArray array];
     self.objectCount = 0;
 }
@@ -56,42 +56,42 @@ NSString * const OBJECT_KEY = @"myObjectValue";
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    // add "+" button to the navigation bar
+    // Add the "+" button to the navigation bar.
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                target:self
                                                                                action:@selector(addItem:)];
     self.navigationItem.rightBarButtonItem = addButton;
 
-    // initialize the activity indicator to display on the top of the screen
+    // Initialize the activity indicator to appear on the top of the screen.
     self.activityIndicator.layer.zPosition = 1;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    // show the activity indicator
+    // Show an activity indicator.
     [self.activityIndicator startAnimating];
     
-    // clear all items
+    // Clear all items.
     [self.objectList removeAllObjects];
 
-    // create an empty KiiQuery (will retrieve all results, sorted by creation date)
+    // Create an empty KiiQuery. This query will retrieve all results sorted by the creation date.
     KiiQuery *allQuery = [KiiQuery queryWithClause:nil];
     [allQuery sortByDesc:@"_created"];
 
-    // define the bucket to query
+    // Define the bucket to query.
     KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:BUCKET_NAME];
 
-    // perform the query
+    // Perform the query.
     [bucket executeQuery:allQuery withBlock:^(KiiQuery *query, KiiBucket *bucket, NSArray *result, KiiQuery *nextQuery, NSError *error) {
-        // hide the activity indicator(configured "Hides When Stopped" in storyboard)
+        // Hide the activity indicator by setting "Hides When Stopped" in the storyboard.
         [self.activityIndicator stopAnimating];
 
-        // check for an error(successful request if error==nil)
+        // Check for an error. The request was successfully processed if error==nil.
         if (error != nil) {
             [self showMessage:@"Query failed" error:error];
             return;
         }
 
-        // add the objects to the objectList and display them
+        // Add the objects to the object array and refresh the list.
         [self.objectList addObjectsFromArray:result];
         [self.tableView reloadData];
     }];
@@ -100,23 +100,23 @@ NSString * const OBJECT_KEY = @"myObjectValue";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // return the number of sections.
+    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // return the number of rows in the section.
+    // Return the number of rows in the section.
     return _objectList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // initialize a cell
+    // Initialize a cell.
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
 
-    // fill the field from object array
+    // Fill the cell with data from the object array.
     KiiObject *obj = _objectList[indexPath.row];
     cell.textLabel.text = [obj getObjectForKey:OBJECT_KEY];
     cell.detailTextLabel.text = obj.objectURI;
@@ -124,7 +124,7 @@ NSString * const OBJECT_KEY = @"myObjectValue";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // show the alert dialog
+    // Show an alert dialog.
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
                                                                    message:@"Would you like to remove this item?"
                                                             preferredStyle:UIAlertControllerStyleAlert];
@@ -134,7 +134,7 @@ NSString * const OBJECT_KEY = @"myObjectValue";
     [alert addAction:[UIAlertAction actionWithTitle:@"Yes"
                                               style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction *action) {
-        // perform the delete action on the tapped object
+        // Perform the delete action to the tapped object.
         [self performDelete:indexPath.row];
     }]];
     [self presentViewController:alert
@@ -146,55 +146,55 @@ NSString * const OBJECT_KEY = @"myObjectValue";
 
 - (void)addItem:(id)sender
 {
-    // show the activity indicator
+    // Show an activity indicator.
     [self.activityIndicator startAnimating];
 
-    // create an incremented title for the object
+    // Create an incremented title for the object.
     NSString *value = [NSString stringWithFormat:@"MyObject %d", ++_objectCount];
 
-    // get a reference to a KiiBucket
+    // Get a reference to the KiiBucket.
     KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:BUCKET_NAME];
     
-    // create a new KiiObject and set a key/value
+    // Create a new KiiObject instance and set the key-value pair.
     KiiObject *object = [bucket createObject];
     [object setObject:value forKey:OBJECT_KEY];
 
-    // save the object asynchronoously
+    // Save the object asynchronously.
     [object saveWithBlock:^(KiiObject *object, NSError *error) {
-        // hide the activity indicator(configured "Hides When Stopped" in storyboard)
+        // Hide the activity indicator by setting "Hides When Stopped" in the storyboard.
         [self.activityIndicator stopAnimating];
 
-        // check for an error(successful request if error==nil)
+        // Check for an error. The request was successfully processed if error==nil.
         if (error != nil) {
             [self showMessage:@"Save failed" error:error];
             return;
         }
 
-        // insert the object into the beginning of the objectList and display them
+        // Insert the object at the beginning of the object array and refresh the list.
         [self.objectList insertObject:object atIndex:0];
         [self.tableView reloadData];
     }];
 }
 
 - (void)performDelete:(long) position {
-    // show the activity indicator
+    // Show an activity indicator.
     [self.activityIndicator startAnimating];
 
-    // get the object to delete based on the index of the row that was tapped
+    // Get the object to delete with the index number of the tapped row.
     KiiObject *obj = _objectList[position];
 
-    // delete the object synchronously
+    // Delete the object asynchronously.
     [obj deleteWithBlock:^(KiiObject *object, NSError *error) {
-        // hide the activity indicator(configured "Hides When Stopped" in storyboard)
+        // Hide the activity indicator by setting "Hides When Stopped" in the storyboard.
         [self.activityIndicator stopAnimating];
 
-        // check for an error(successful request if error==nil)
+        // Check for an error. The request was successfully processed if error==nil.
         if (error != nil) {
             [self showMessage:@"Delete failed" error:error];
             return;
         }
 
-        // remove the object from the list
+        // Remove the object from the object array and refresh the list.
         [self.objectList removeObject:obj];
         [self.tableView reloadData];
     }];

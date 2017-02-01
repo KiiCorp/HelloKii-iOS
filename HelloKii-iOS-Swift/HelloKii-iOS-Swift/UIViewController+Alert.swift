@@ -1,6 +1,6 @@
 //
 //
-// Copyright 2016 Kii Corporation
+// Copyright 2017 Kii Corporation
 // http://kii.com
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,7 +22,7 @@ import UIKit
 
 extension UIViewController {
     func showMessage(_ message: String, error: NSError?) {
-        // format the message
+        // Format the message.
         let alertMessage : String
         if let description = error?.userInfo["description"] as? String {
             alertMessage = message + ": " + description
@@ -30,7 +30,7 @@ extension UIViewController {
             alertMessage = message
         }
 
-        // show an alert dialog
+        // Show an alert dialog.
         let alert = UIAlertController(title: nil, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         present(alert, animated: true, completion: nil)
