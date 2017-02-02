@@ -1,6 +1,6 @@
 //
 //
-// Copyright 2015 Kii Corporation
+// Copyright 2017 Kii Corporation
 // http://kii.com
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +28,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Initialize the Kii SDK!
+    // Initialize the Kii Cloud SDK.
     [Kii beginWithID:@"__KII_APP_ID__"
               andKey:@"__KII_APP_KEY__"
              andSite:kiiSiteUS];

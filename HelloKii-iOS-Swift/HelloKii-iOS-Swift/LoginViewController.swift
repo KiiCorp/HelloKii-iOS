@@ -1,6 +1,6 @@
 //
 //
-// Copyright 2016 Kii Corporation
+// Copyright 2017 Kii Corporation
 // http://kii.com
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,56 +35,57 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+        // Close the keyboard when the view is tapped.
         view.endEditing(true)
     }
 
     @IBAction func signupButtonPressed(_ sender: UIButton) {
-        // show the activity indicator
+        // Show an activity indicator.
         activityIndicator.startAnimating()
 
-        // get the username/password combination from the UI
+        // Get the username and password from the UI.
         let username = usernameField.text!
         let password = passwordField.text!
 
-        // create a KiiUser object
+        // Create a KiiUser object.
         let user = KiiUser(username: username, andPassword: password)
 
-        // register the user asynchronously
+        // Register the user asynchronously.
         user.performRegistration { (user, error) -> Void in
-            // hide the activity indicator(configured "Hides When Stopped" in storyboard)
+            // Hide the activity indicator by setting "Hides When Stopped" in the storyboard.
             self.activityIndicator.stopAnimating()
 
-            // check for an error(successful request if error==nil)
+            // Check for an error. The request was successfully processed if error==nil.
             if error != nil {
                 self.showMessage("Sign up failed", error: error as NSError?)
                 return
             }
 
-            // go to the main screen
+            // Go to the main screen.
             self.performSegue(withIdentifier: "OpenMainPage", sender: nil)
         }
     }
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        // show the activity indicator
+        // Show an activity indicator.
         activityIndicator.startAnimating()
 
-        // get the username/password combination from the UI
+        // Get the username and password from the UI.
         let username = usernameField.text!
         let password = passwordField.text!
 
-        // authenticate the user asynchronously
+        // Authenticate the user asynchronously.
         KiiUser.authenticate(username, withPassword: password) { (user, error) -> Void in
-            // hide the activity indicator(configured "Hides When Stopped" in storyboard)
+            // Hide the activity indicator by setting "Hides When Stopped" in the storyboard.
             self.activityIndicator.stopAnimating()
 
-            // check for an error(successful request if error==nil)
+            // Check for an error. The request was successfully processed if error==nil.
             if error != nil {
-                self.showMessage("login failed", error: error as NSError?)
+                self.showMessage("Login failed", error: error as NSError?)
                 return
             }
 
-            // go to the main screen
+            // Go to the main screen.
             self.performSegue(withIdentifier: "OpenMainPage", sender: nil)
         }
     }

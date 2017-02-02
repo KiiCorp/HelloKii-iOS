@@ -1,6 +1,6 @@
 //
 //
-// Copyright 2016 Kii Corporation
+// Copyright 2017 Kii Corporation
 // http://kii.com
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        // Initialize the  SDK!
+        // Initialize the Kii Cloud SDK.
         Kii.begin(withID: "__KII_APP_ID__", andKey: "__KII_APP_KEY__", andSite: __KII_APP_SITE__)
 
         return true

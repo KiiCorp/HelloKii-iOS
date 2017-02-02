@@ -1,6 +1,6 @@
 //
 //
-// Copyright 2015 Kii Corporation
+// Copyright 2017 Kii Corporation
 // http://kii.com
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -41,59 +41,59 @@
 }
 
 - (IBAction)onTap:(id)sender {
-    // close the keyboard when the view is tapped
+    // Close the keyboard when the view is tapped.
     [self.view endEditing:YES];
 }
 
 - (IBAction)signupButtonPressed:(id)sender {
-    // show the activity indicator
+    // Show an activity indicator.
     [self.activityIndicator startAnimating];
     
-    // get the username/password combination from the UI
+    // Get the username and password from the UI.
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
     
-    // create a KiiUser object
+    // Create a KiiUser object.
     KiiUser *user = [KiiUser userWithUsername:username
                                   andPassword:password];
-    // register the user asynchronously
+    // Register the user asynchronously.
     [user performRegistrationWithBlock:^(KiiUser *user, NSError *error) {
-        // hide the activity indicator(configured "Hides When Stopped" in storyboard)
+        // Hide the activity indicator by setting "Hides When Stopped" in the storyboard.
         [self.activityIndicator stopAnimating];
         
-        // check for an error(successful request if error==nil)
+        // Check for an error. The request was successfully processed if error==nil.
         if (error != nil) {
             [self showMessage:@"Sign up failed" error:error];
             return;
         }
         
-        // go to the main screen
+        // Go to the main screen.
         [self performSegueWithIdentifier:@"OpenMainPage" sender:nil];
     }];
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
-    // show the activity indicator
+    // Show an activity indicator.
     [self.activityIndicator startAnimating];
 
-    // get the username/password combination from the UI
+    // Get the username and password from the UI.
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
 
-    // authenticate the user asynchronously
+    // Authenticate the user asynchronously.
     [KiiUser authenticate:username
              withPassword:password
                  andBlock:^(KiiUser *user, NSError *error) {
-        // hide the activity indicator(configured "Hides When Stopped" in storyboard)
+        // Hide the activity indicator by setting "Hides When Stopped" in the storyboard.
         [self.activityIndicator stopAnimating];
 
-        // check for an error(successful request if error==nil)
+        // Check for an error. The request was successfully processed if error==nil.
         if (error != nil) {
             [self showMessage:@"Login failed" error:error];
             return;
         }
 
-        // go to the main screen
+        // Go to the main screen.
         [self performSegueWithIdentifier:@"OpenMainPage" sender:nil];
     }];
 }
