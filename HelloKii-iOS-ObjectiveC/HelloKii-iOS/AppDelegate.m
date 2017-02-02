@@ -31,7 +31,7 @@
     // Initialize the Kii Cloud SDK.
     [Kii beginWithID:@"__KII_APP_ID__"
               andKey:@"__KII_APP_KEY__"
-             andSite:kiiSiteUS];
+             andSite:__KII_APP_SITE__];
 
     return YES;
 }
