@@ -64,7 +64,6 @@ fi
 				<string>4DD8ED481CBCA06100B3164B</string>
 				<string>4DD8ED491CBCA06100B3164B</string>
 				<string>4DD8ED4A1CBCA06100B3164B</string>
-				<string>4DD8ED431CBCA03500B3164B</string>
 				<string>4DD8ECD51CB5F65C00B3164B</string>
 				<string>4DD8ECEA1CB5F65D00B3164B</string>
 				<string>4DD8ECF51CB5F65D00B3164B</string>
@@ -1079,17 +1078,6 @@ fi
 			<string>4DD8ED061CB633DD00B3164B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>4DD8ED431CBCA03500B3164B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>path</key>
-			<string>KiiSDK.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>4DD8ED451CBCA06100B3164B</key>
 		<dict>
